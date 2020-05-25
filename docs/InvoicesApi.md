@@ -1,0 +1,1050 @@
+# SwaggerClient::InvoicesApi
+
+All URIs are relative to *https://api.fortnox.se/3*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**add_invoice**](InvoicesApi.md#add_invoice) | **POST** /invoices | Add an invoice
+[**bookkeep_invoice**](InvoicesApi.md#bookkeep_invoice) | **PUT** /invoices/{documentNumber}/bookkeep | Bookkeep an invoice
+[**cancel_invoice**](InvoicesApi.md#cancel_invoice) | **PUT** /invoices/{documentNumber}/cancel | Cancel an invoice
+[**credit_invoice**](InvoicesApi.md#credit_invoice) | **PUT** /invoices/{documentNumber}/credit | Credit an invoice
+[**e_invoice**](InvoicesApi.md#e_invoice) | **GET** /invoices/{documentNumber}/einvoice | Send an e-invoice
+[**email_invoice**](InvoicesApi.md#email_invoice) | **GET** /invoices/{documentNumber}/email | Email an invoice
+[**external_print_invoice**](InvoicesApi.md#external_print_invoice) | **PUT** /invoices/{documentNumber}/externalprint | Mark invoice as &#39;Sent&#39; without generating a PDF
+[**get_cancelled_invoices**](InvoicesApi.md#get_cancelled_invoices) | **GET** /invoices/?filter&#x3D;cancelled | Get all cancelled invoices
+[**get_fully_paid_invoices**](InvoicesApi.md#get_fully_paid_invoices) | **GET** /invoices/?filter&#x3D;fullypaid | Get all fully paid invoices
+[**get_invoice**](InvoicesApi.md#get_invoice) | **GET** /invoices/{documentNumber} | Get a specific invoice
+[**get_invoices**](InvoicesApi.md#get_invoices) | **GET** /invoices | Get all invoices
+[**get_unbooked_invoices**](InvoicesApi.md#get_unbooked_invoices) | **GET** /invoices/?filter&#x3D;unbooked | Get all unbooked invoices
+[**get_unpaid_and_overdue_invoices**](InvoicesApi.md#get_unpaid_and_overdue_invoices) | **GET** /invoices/?filter&#x3D;unpaidoverdue | Get all unpaid and overdue invoices
+[**get_unpaid_invoices**](InvoicesApi.md#get_unpaid_invoices) | **GET** /invoices/?filter&#x3D;unpaid | Get all unpaid invoices
+[**preview_invoice**](InvoicesApi.md#preview_invoice) | **GET** /invoices/{documentNumber}/preview | Preview an invoice
+[**print_invoice**](InvoicesApi.md#print_invoice) | **GET** /invoices/{documentNumber}/print | Print an invoice
+[**print_invoice_reminder**](InvoicesApi.md#print_invoice_reminder) | **GET** /invoices/{documentNumber}/printreminder | Print an invoice reminder
+[**update_invoice**](InvoicesApi.md#update_invoice) | **PUT** /invoices | Update invoice
+
+
+# **add_invoice**
+> add_invoice(body)
+
+Add an invoice
+
+Add an invoice
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+body = SwaggerClient::Invoice.new # Invoice | Invoice object that needs to be added
+
+
+begin
+  #Add an invoice
+  api_instance.add_invoice(body)
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->add_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Invoice**](Invoice.md)| Invoice object that needs to be added | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **bookkeep_invoice**
+> Invoice bookkeep_invoice(document_number)
+
+Bookkeep an invoice
+
+Bookkeep an invoice
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+document_number = 56 # Integer | Document number
+
+
+begin
+  #Bookkeep an invoice
+  result = api_instance.bookkeep_invoice(document_number)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->bookkeep_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_number** | **Integer**| Document number | 
+
+### Return type
+
+[**Invoice**](Invoice.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **cancel_invoice**
+> Invoice cancel_invoice(document_number)
+
+Cancel an invoice
+
+Cancels an invoice (same as “Makulerad” in the GUI)
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+document_number = 56 # Integer | Document number
+
+
+begin
+  #Cancel an invoice
+  result = api_instance.cancel_invoice(document_number)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->cancel_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_number** | **Integer**| Document number | 
+
+### Return type
+
+[**Invoice**](Invoice.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **credit_invoice**
+> Invoice credit_invoice(document_number)
+
+Credit an invoice
+
+Creates a credit invoice from the provided invoice. The created credit invoice will be referenced in the property CreditInvoiceReference.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+document_number = 56 # Integer | Document number
+
+
+begin
+  #Credit an invoice
+  result = api_instance.credit_invoice(document_number)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->credit_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_number** | **Integer**| Document number | 
+
+### Return type
+
+[**Invoice**](Invoice.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **e_invoice**
+> Invoice e_invoice(document_number)
+
+Send an e-invoice
+
+Sends an e-invoice to the customer with an attached PDF document of the invoice. Note that this action also sets the property Sent as true.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+document_number = 56 # Integer | Document number
+
+
+begin
+  #Send an e-invoice
+  result = api_instance.e_invoice(document_number)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->e_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_number** | **Integer**| Document number | 
+
+### Return type
+
+[**Invoice**](Invoice.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **email_invoice**
+> Invoice email_invoice(document_number)
+
+Email an invoice
+
+Sends an e-mail to the customer with an attached PDF document of the invoice. You can use the properties in the EmailInformation to customize the e-mail message on each invoice.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+document_number = 56 # Integer | Document number
+
+
+begin
+  #Email an invoice
+  result = api_instance.email_invoice(document_number)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->email_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_number** | **Integer**| Document number | 
+
+### Return type
+
+[**Invoice**](Invoice.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **external_print_invoice**
+> Invoice external_print_invoice(document_number)
+
+Mark invoice as 'Sent' without generating a PDF
+
+This action is used to set the field Sent as true from an external system without generating a PDF.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+document_number = 56 # Integer | Document number
+
+
+begin
+  #Mark invoice as 'Sent' without generating a PDF
+  result = api_instance.external_print_invoice(document_number)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->external_print_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_number** | **Integer**| Document number | 
+
+### Return type
+
+[**Invoice**](Invoice.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **get_cancelled_invoices**
+> Invoices get_cancelled_invoices
+
+Get all cancelled invoices
+
+Retrieves all invoices with the status 'cancelled'
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+begin
+  #Get all cancelled invoices
+  result = api_instance.get_cancelled_invoices
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->get_cancelled_invoices: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Invoices**](Invoices.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **get_fully_paid_invoices**
+> Invoices get_fully_paid_invoices
+
+Get all fully paid invoices
+
+Retrieves all invoices that has been fully paid
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+begin
+  #Get all fully paid invoices
+  result = api_instance.get_fully_paid_invoices
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->get_fully_paid_invoices: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Invoices**](Invoices.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **get_invoice**
+> Invoice get_invoice(document_number)
+
+Get a specific invoice
+
+Retrieves the details of an invoice. You need to supply the unique document number that was returned when the invoice was created or retrieved from the list of invoices.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+document_number = 56 # Integer | Document number
+
+
+begin
+  #Get a specific invoice
+  result = api_instance.get_invoice(document_number)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->get_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_number** | **Integer**| Document number | 
+
+### Return type
+
+[**Invoice**](Invoice.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **get_invoices**
+> Invoices get_invoices
+
+Get all invoices
+
+Get all invoices
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+begin
+  #Get all invoices
+  result = api_instance.get_invoices
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->get_invoices: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Invoices**](Invoices.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **get_unbooked_invoices**
+> Invoices get_unbooked_invoices
+
+Get all unbooked invoices
+
+Retrieves all invoices that is unbooked
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+begin
+  #Get all unbooked invoices
+  result = api_instance.get_unbooked_invoices
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->get_unbooked_invoices: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Invoices**](Invoices.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **get_unpaid_and_overdue_invoices**
+> Invoices get_unpaid_and_overdue_invoices
+
+Get all unpaid and overdue invoices
+
+Retrieves all invoices that is unpaid and overdue
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+begin
+  #Get all unpaid and overdue invoices
+  result = api_instance.get_unpaid_and_overdue_invoices
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->get_unpaid_and_overdue_invoices: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Invoices**](Invoices.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **get_unpaid_invoices**
+> Invoices get_unpaid_invoices
+
+Get all unpaid invoices
+
+Retrieves all invoices that is unpaid
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+begin
+  #Get all unpaid invoices
+  result = api_instance.get_unpaid_invoices
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->get_unpaid_invoices: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Invoices**](Invoices.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **preview_invoice**
+> Invoice preview_invoice(document_number)
+
+Preview an invoice
+
+This action returns a PDF document with the current template that is used by the specific document. Unliike the action print, this action doesn’t set the property Sent as true.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+document_number = 56 # Integer | Document number
+
+
+begin
+  #Preview an invoice
+  result = api_instance.preview_invoice(document_number)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->preview_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_number** | **Integer**| Document number | 
+
+### Return type
+
+[**Invoice**](Invoice.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **print_invoice**
+> Invoice print_invoice(document_number)
+
+Print an invoice
+
+This action returns a PDF document with the current template that is used by the specific document. Note that this action also sets the property Sent as true.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+document_number = 56 # Integer | Document number
+
+
+begin
+  #Print an invoice
+  result = api_instance.print_invoice(document_number)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->print_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_number** | **Integer**| Document number | 
+
+### Return type
+
+[**Invoice**](Invoice.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **print_invoice_reminder**
+> Invoice print_invoice_reminder(document_number)
+
+Print an invoice reminder
+
+This action returns a PDF document with the current reminder template that is used by the specific document. Note that this action also sets the property Sent as true.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+document_number = 56 # Integer | Document number
+
+
+begin
+  #Print an invoice reminder
+  result = api_instance.print_invoice_reminder(document_number)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->print_invoice_reminder: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **document_number** | **Integer**| Document number | 
+
+### Return type
+
+[**Invoice**](Invoice.md)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **update_invoice**
+> update_invoice(body)
+
+Update invoice
+
+Update an invoice, find by document number
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: access_token
+  config.api_key['Access-Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Access-Token'] = 'Bearer'
+
+  # Configure API key authorization: client_secret
+  config.api_key['Client-Secret'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['Client-Secret'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::InvoicesApi.new
+
+body = SwaggerClient::Invoice.new # Invoice | Invoice object to be updated
+
+
+begin
+  #Update invoice
+  api_instance.update_invoice(body)
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling InvoicesApi->update_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Invoice**](Invoice.md)| Invoice object to be updated | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
