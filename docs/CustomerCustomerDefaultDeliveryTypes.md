@@ -1,4 +1,4 @@
-# SwaggerClient::CustomerCustomerDefaultDeliveryTypes
+# StandoutFortnox::CustomerCustomerDefaultDeliveryTypes
 
 ## Properties
 Name | Type | Description | Notes

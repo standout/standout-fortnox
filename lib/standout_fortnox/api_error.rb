@@ -10,7 +10,7 @@ Swagger Codegen version: 2.4.12
 
 =end
 
-module SwaggerClient
+module StandoutFortnox
   class ApiError < StandardError
     attr_reader :code, :response_headers, :response_body
 

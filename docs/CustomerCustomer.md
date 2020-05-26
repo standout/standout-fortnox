@@ -1,4 +1,4 @@
-# SwaggerClient::CustomerCustomer
+# StandoutFortnox::CustomerCustomer
 
 ## Properties
 Name | Type | Description | Notes

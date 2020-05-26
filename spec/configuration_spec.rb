@@ -12,14 +12,14 @@ Swagger Codegen version: 2.4.12
 
 require 'spec_helper'
 
-describe SwaggerClient::Configuration do
-  let(:config) { SwaggerClient::Configuration.default }
+describe StandoutFortnox::Configuration do
+  let(:config) { StandoutFortnox::Configuration.default }
 
   before(:each) do
     # uncomment below to setup host and base_path
     # require 'URI'
     # uri = URI.parse("https://api.fortnox.se/3")
-    # SwaggerClient.configure do |c|
+    # StandoutFortnox.configure do |c|
     #   c.host = uri.host
     #   c.base_path = uri.path
     # end

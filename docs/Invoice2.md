@@ -1,4 +1,4 @@
-# SwaggerClient::Invoice2
+# StandoutFortnox::Invoice2
 
 ## Properties
 Name | Type | Description | Notes

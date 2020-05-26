@@ -1,4 +1,4 @@
-# SwaggerClient::InvoicesApi
+# StandoutFortnox::InvoicesApi
 
 All URIs are relative to *https://api.fortnox.se/3*
 
@@ -34,9 +34,9 @@ Add an invoice
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -48,15 +48,15 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
-body = SwaggerClient::Invoice.new # Invoice | Invoice object that needs to be added
+body = StandoutFortnox::Invoice.new # Invoice | Invoice object that needs to be added
 
 
 begin
   #Add an invoice
   api_instance.add_invoice(body)
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->add_invoice: #{e}"
 end
 ```
@@ -92,9 +92,9 @@ Bookkeep an invoice
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -106,7 +106,7 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 document_number = 56 # Integer | Document number
 
@@ -115,7 +115,7 @@ begin
   #Bookkeep an invoice
   result = api_instance.bookkeep_invoice(document_number)
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->bookkeep_invoice: #{e}"
 end
 ```
@@ -151,9 +151,9 @@ Cancels an invoice (same as “Makulerad” in the GUI)
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -165,7 +165,7 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 document_number = 56 # Integer | Document number
 
@@ -174,7 +174,7 @@ begin
   #Cancel an invoice
   result = api_instance.cancel_invoice(document_number)
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->cancel_invoice: #{e}"
 end
 ```
@@ -210,9 +210,9 @@ Creates a credit invoice from the provided invoice. The created credit invoice w
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -224,7 +224,7 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 document_number = 56 # Integer | Document number
 
@@ -233,7 +233,7 @@ begin
   #Credit an invoice
   result = api_instance.credit_invoice(document_number)
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->credit_invoice: #{e}"
 end
 ```
@@ -269,9 +269,9 @@ Sends an e-invoice to the customer with an attached PDF document of the invoice.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -283,7 +283,7 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 document_number = 56 # Integer | Document number
 
@@ -292,7 +292,7 @@ begin
   #Send an e-invoice
   result = api_instance.e_invoice(document_number)
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->e_invoice: #{e}"
 end
 ```
@@ -328,9 +328,9 @@ Sends an e-mail to the customer with an attached PDF document of the invoice. Yo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -342,7 +342,7 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 document_number = 56 # Integer | Document number
 
@@ -351,7 +351,7 @@ begin
   #Email an invoice
   result = api_instance.email_invoice(document_number)
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->email_invoice: #{e}"
 end
 ```
@@ -387,9 +387,9 @@ This action is used to set the field Sent as true from an external system withou
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -401,7 +401,7 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 document_number = 56 # Integer | Document number
 
@@ -410,7 +410,7 @@ begin
   #Mark invoice as 'Sent' without generating a PDF
   result = api_instance.external_print_invoice(document_number)
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->external_print_invoice: #{e}"
 end
 ```
@@ -446,9 +446,9 @@ Retrieves all invoices with the status 'cancelled'
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -460,13 +460,13 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 begin
   #Get all cancelled invoices
   result = api_instance.get_cancelled_invoices
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->get_cancelled_invoices: #{e}"
 end
 ```
@@ -499,9 +499,9 @@ Retrieves all invoices that has been fully paid
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -513,13 +513,13 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 begin
   #Get all fully paid invoices
   result = api_instance.get_fully_paid_invoices
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->get_fully_paid_invoices: #{e}"
 end
 ```
@@ -552,9 +552,9 @@ Retrieves the details of an invoice. You need to supply the unique document numb
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -566,7 +566,7 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 document_number = 56 # Integer | Document number
 
@@ -575,7 +575,7 @@ begin
   #Get a specific invoice
   result = api_instance.get_invoice(document_number)
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->get_invoice: #{e}"
 end
 ```
@@ -611,9 +611,9 @@ Get all invoices
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -625,13 +625,13 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 begin
   #Get all invoices
   result = api_instance.get_invoices
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->get_invoices: #{e}"
 end
 ```
@@ -664,9 +664,9 @@ Retrieves all invoices that is unbooked
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -678,13 +678,13 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 begin
   #Get all unbooked invoices
   result = api_instance.get_unbooked_invoices
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->get_unbooked_invoices: #{e}"
 end
 ```
@@ -717,9 +717,9 @@ Retrieves all invoices that is unpaid and overdue
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -731,13 +731,13 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 begin
   #Get all unpaid and overdue invoices
   result = api_instance.get_unpaid_and_overdue_invoices
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->get_unpaid_and_overdue_invoices: #{e}"
 end
 ```
@@ -770,9 +770,9 @@ Retrieves all invoices that is unpaid
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -784,13 +784,13 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 begin
   #Get all unpaid invoices
   result = api_instance.get_unpaid_invoices
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->get_unpaid_invoices: #{e}"
 end
 ```
@@ -823,9 +823,9 @@ This action returns a PDF document with the current template that is used by the
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -837,7 +837,7 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 document_number = 56 # Integer | Document number
 
@@ -846,7 +846,7 @@ begin
   #Preview an invoice
   result = api_instance.preview_invoice(document_number)
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->preview_invoice: #{e}"
 end
 ```
@@ -882,9 +882,9 @@ This action returns a PDF document with the current template that is used by the
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -896,7 +896,7 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 document_number = 56 # Integer | Document number
 
@@ -905,7 +905,7 @@ begin
   #Print an invoice
   result = api_instance.print_invoice(document_number)
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->print_invoice: #{e}"
 end
 ```
@@ -941,9 +941,9 @@ This action returns a PDF document with the current reminder template that is us
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -955,7 +955,7 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
 document_number = 56 # Integer | Document number
 
@@ -964,7 +964,7 @@ begin
   #Print an invoice reminder
   result = api_instance.print_invoice_reminder(document_number)
   p result
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->print_invoice_reminder: #{e}"
 end
 ```
@@ -1000,9 +1000,9 @@ Update an invoice, find by document number
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'standout_fortnox'
 # setup authorization
-SwaggerClient.configure do |config|
+StandoutFortnox.configure do |config|
   # Configure API key authorization: access_token
   config.api_key['Access-Token'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
@@ -1014,15 +1014,15 @@ SwaggerClient.configure do |config|
   #config.api_key_prefix['Client-Secret'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = StandoutFortnox::InvoicesApi.new
 
-body = SwaggerClient::Invoice.new # Invoice | Invoice object to be updated
+body = StandoutFortnox::Invoice.new # Invoice | Invoice object to be updated
 
 
 begin
   #Update invoice
   api_instance.update_invoice(body)
-rescue SwaggerClient::ApiError => e
+rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->update_invoice: #{e}"
 end
 ```

@@ -12,29 +12,25 @@ Swagger Codegen version: 2.4.12
 
 require 'date'
 
-module SwaggerClient
-  class MetaInformation
-    attr_accessor :current_page
+module StandoutFortnox
+  class Invoices2
+    attr_accessor :invoices
 
-    attr_accessor :total_pages
-
-    attr_accessor :total_resources
+    attr_accessor :meta_information
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'current_page' => :'@CurrentPage',
-        :'total_pages' => :'@TotalPages',
-        :'total_resources' => :'@TotalResources'
+        :'invoices' => :'Invoices',
+        :'meta_information' => :'MetaInformation'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'current_page' => :'Integer',
-        :'total_pages' => :'Integer',
-        :'total_resources' => :'Integer'
+        :'invoices' => :'Array<InvoicesInvoices>',
+        :'meta_information' => :'MetaInformation'
       }
     end
 
@@ -46,16 +42,14 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'@CurrentPage')
-        self.current_page = attributes[:'@CurrentPage']
+      if attributes.has_key?(:'Invoices')
+        if (value = attributes[:'Invoices']).is_a?(Array)
+          self.invoices = value
+        end
       end
 
-      if attributes.has_key?(:'@TotalPages')
-        self.total_pages = attributes[:'@TotalPages']
-      end
-
-      if attributes.has_key?(:'@TotalResources')
-        self.total_resources = attributes[:'@TotalResources']
+      if attributes.has_key?(:'MetaInformation')
+        self.meta_information = attributes[:'MetaInformation']
       end
     end
 
@@ -77,9 +71,8 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          current_page == o.current_page &&
-          total_pages == o.total_pages &&
-          total_resources == o.total_resources
+          invoices == o.invoices &&
+          meta_information == o.meta_information
     end
 
     # @see the `==` method
@@ -91,7 +84,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [current_page, total_pages, total_resources].hash
+      [invoices, meta_information].hash
     end
 
     # Builds the object from hash
@@ -151,7 +144,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = StandoutFortnox.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

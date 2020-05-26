@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.12
 
 require 'date'
 
-module SwaggerClient
+module StandoutFortnox
   class InvoiceInvoiceInvoiceRows
     # Searchable (accountnumberfrom=1111&accountnumberto=8999) Account number. If not provided the predefined account will be used.
     attr_accessor :account_number
@@ -344,7 +344,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = StandoutFortnox.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

@@ -1,4 +1,4 @@
-# SwaggerClient::MetaInformation
+# StandoutFortnox::MetaInformation
 
 ## Properties
 Name | Type | Description | Notes

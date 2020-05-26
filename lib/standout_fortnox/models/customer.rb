@@ -12,48 +12,21 @@ Swagger Codegen version: 2.4.12
 
 require 'date'
 
-module SwaggerClient
-  # The properties for this object is listed in the table for 'EDI Information'.
-  class InvoiceInvoiceEDIInformation
-    # Invoice address GLN for EDI
-    attr_accessor :edi_global_location_number
-
-    # Delivery address GLN for EDI
-    attr_accessor :edi_global_location_number_delivery
-
-    # Extra EDI Information
-    attr_accessor :edi_invoice_extra1
-
-    # Extra EDI Information
-    attr_accessor :edi_invoice_extra2
-
-    # Our electronic reference for EDI
-    attr_accessor :edi_our_electronic_reference
-
-    # Your electronic reference for EDI
-    attr_accessor :edi_your_electronic_reference
+module StandoutFortnox
+  class Customer
+    attr_accessor :customer
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'edi_global_location_number' => :'EDIGlobalLocationNumber',
-        :'edi_global_location_number_delivery' => :'EDIGlobalLocationNumberDelivery',
-        :'edi_invoice_extra1' => :'EDIInvoiceExtra1',
-        :'edi_invoice_extra2' => :'EDIInvoiceExtra2',
-        :'edi_our_electronic_reference' => :'EDIOurElectronicReference',
-        :'edi_your_electronic_reference' => :'EDIYourElectronicReference'
+        :'customer' => :'Customer'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'edi_global_location_number' => :'String',
-        :'edi_global_location_number_delivery' => :'String',
-        :'edi_invoice_extra1' => :'String',
-        :'edi_invoice_extra2' => :'String',
-        :'edi_our_electronic_reference' => :'String',
-        :'edi_your_electronic_reference' => :'String'
+        :'customer' => :'CustomerCustomer'
       }
     end
 
@@ -65,28 +38,8 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'EDIGlobalLocationNumber')
-        self.edi_global_location_number = attributes[:'EDIGlobalLocationNumber']
-      end
-
-      if attributes.has_key?(:'EDIGlobalLocationNumberDelivery')
-        self.edi_global_location_number_delivery = attributes[:'EDIGlobalLocationNumberDelivery']
-      end
-
-      if attributes.has_key?(:'EDIInvoiceExtra1')
-        self.edi_invoice_extra1 = attributes[:'EDIInvoiceExtra1']
-      end
-
-      if attributes.has_key?(:'EDIInvoiceExtra2')
-        self.edi_invoice_extra2 = attributes[:'EDIInvoiceExtra2']
-      end
-
-      if attributes.has_key?(:'EDIOurElectronicReference')
-        self.edi_our_electronic_reference = attributes[:'EDIOurElectronicReference']
-      end
-
-      if attributes.has_key?(:'EDIYourElectronicReference')
-        self.edi_your_electronic_reference = attributes[:'EDIYourElectronicReference']
+      if attributes.has_key?(:'Customer')
+        self.customer = attributes[:'Customer']
       end
     end
 
@@ -108,12 +61,7 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          edi_global_location_number == o.edi_global_location_number &&
-          edi_global_location_number_delivery == o.edi_global_location_number_delivery &&
-          edi_invoice_extra1 == o.edi_invoice_extra1 &&
-          edi_invoice_extra2 == o.edi_invoice_extra2 &&
-          edi_our_electronic_reference == o.edi_our_electronic_reference &&
-          edi_your_electronic_reference == o.edi_your_electronic_reference
+          customer == o.customer
     end
 
     # @see the `==` method
@@ -125,7 +73,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [edi_global_location_number, edi_global_location_number_delivery, edi_invoice_extra1, edi_invoice_extra2, edi_our_electronic_reference, edi_your_electronic_reference].hash
+      [customer].hash
     end
 
     # Builds the object from hash
@@ -185,7 +133,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = StandoutFortnox.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

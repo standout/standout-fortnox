@@ -12,21 +12,21 @@ Swagger Codegen version: 2.4.12
 
 require 'date'
 
-module SwaggerClient
-  class Customer2
-    attr_accessor :customer
+module StandoutFortnox
+  class Invoice2
+    attr_accessor :invoice
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'customer' => :'Customer'
+        :'invoice' => :'Invoice'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'customer' => :'CustomerCustomer'
+        :'invoice' => :'InvoiceInvoice'
       }
     end
 
@@ -38,8 +38,8 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'Customer')
-        self.customer = attributes[:'Customer']
+      if attributes.has_key?(:'Invoice')
+        self.invoice = attributes[:'Invoice']
       end
     end
 
@@ -61,7 +61,7 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          customer == o.customer
+          invoice == o.invoice
     end
 
     # @see the `==` method
@@ -73,7 +73,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [customer].hash
+      [invoice].hash
     end
 
     # Builds the object from hash
@@ -133,7 +133,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = StandoutFortnox.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

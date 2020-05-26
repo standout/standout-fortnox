@@ -10,6 +10,6 @@ Swagger Codegen version: 2.4.12
 
 =end
 
-module SwaggerClient
+module StandoutFortnox
   VERSION = '1.0.0'
 end
