@@ -12,25 +12,21 @@ Swagger Codegen version: 2.4.12
 
 require 'date'
 
-module SwaggerClient
-  class Customers2
-    attr_accessor :customers
-
-    attr_accessor :meta_information
+module StandoutFortnox
+  class Customer2
+    attr_accessor :customer
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'customers' => :'Customers',
-        :'meta_information' => :'MetaInformation'
+        :'customer' => :'Customer'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'customers' => :'Array<CustomersCustomers>',
-        :'meta_information' => :'MetaInformation'
+        :'customer' => :'CustomerCustomer'
       }
     end
 
@@ -42,14 +38,8 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'Customers')
-        if (value = attributes[:'Customers']).is_a?(Array)
-          self.customers = value
-        end
-      end
-
-      if attributes.has_key?(:'MetaInformation')
-        self.meta_information = attributes[:'MetaInformation']
+      if attributes.has_key?(:'Customer')
+        self.customer = attributes[:'Customer']
       end
     end
 
@@ -71,8 +61,7 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          customers == o.customers &&
-          meta_information == o.meta_information
+          customer == o.customer
     end
 
     # @see the `==` method
@@ -84,7 +73,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [customers, meta_information].hash
+      [customer].hash
     end
 
     # Builds the object from hash
@@ -144,7 +133,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = StandoutFortnox.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

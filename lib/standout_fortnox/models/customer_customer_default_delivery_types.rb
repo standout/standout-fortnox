@@ -12,25 +12,33 @@ Swagger Codegen version: 2.4.12
 
 require 'date'
 
-module SwaggerClient
-  class Invoices
-    attr_accessor :invoices
+module StandoutFortnox
+  # The properties for this object is listed in the table for “Default Delivery Types”.
+  class CustomerCustomerDefaultDeliveryTypes
+    # Default delivery type for invoices. Can be PRINT EMAIL or PRINTSERVICE.
+    attr_accessor :invoice
 
-    attr_accessor :meta_information
+    # Default delivery type for offers. Can be PRINT EMAIL or PRINTSERVICE.
+    attr_accessor :offer
+
+    # Default delivery type for orders. Can be PRINT EMAIL or PRINTSERVICE.
+    attr_accessor :order
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'invoices' => :'Invoices',
-        :'meta_information' => :'MetaInformation'
+        :'invoice' => :'Invoice',
+        :'offer' => :'Offer',
+        :'order' => :'Order'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'invoices' => :'Array<InvoicesInvoices>',
-        :'meta_information' => :'MetaInformation'
+        :'invoice' => :'String',
+        :'offer' => :'String',
+        :'order' => :'String'
       }
     end
 
@@ -42,14 +50,16 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'Invoices')
-        if (value = attributes[:'Invoices']).is_a?(Array)
-          self.invoices = value
-        end
+      if attributes.has_key?(:'Invoice')
+        self.invoice = attributes[:'Invoice']
       end
 
-      if attributes.has_key?(:'MetaInformation')
-        self.meta_information = attributes[:'MetaInformation']
+      if attributes.has_key?(:'Offer')
+        self.offer = attributes[:'Offer']
+      end
+
+      if attributes.has_key?(:'Order')
+        self.order = attributes[:'Order']
       end
     end
 
@@ -71,8 +81,9 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          invoices == o.invoices &&
-          meta_information == o.meta_information
+          invoice == o.invoice &&
+          offer == o.offer &&
+          order == o.order
     end
 
     # @see the `==` method
@@ -84,7 +95,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [invoices, meta_information].hash
+      [invoice, offer, order].hash
     end
 
     # Builds the object from hash
@@ -144,7 +155,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = StandoutFortnox.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

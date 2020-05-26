@@ -12,21 +12,29 @@ Swagger Codegen version: 2.4.12
 
 require 'date'
 
-module SwaggerClient
-  class Customer
-    attr_accessor :customer
+module StandoutFortnox
+  class MetaInformation
+    attr_accessor :current_page
+
+    attr_accessor :total_pages
+
+    attr_accessor :total_resources
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'customer' => :'Customer'
+        :'current_page' => :'@CurrentPage',
+        :'total_pages' => :'@TotalPages',
+        :'total_resources' => :'@TotalResources'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'customer' => :'CustomerCustomer'
+        :'current_page' => :'Integer',
+        :'total_pages' => :'Integer',
+        :'total_resources' => :'Integer'
       }
     end
 
@@ -38,8 +46,16 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'Customer')
-        self.customer = attributes[:'Customer']
+      if attributes.has_key?(:'@CurrentPage')
+        self.current_page = attributes[:'@CurrentPage']
+      end
+
+      if attributes.has_key?(:'@TotalPages')
+        self.total_pages = attributes[:'@TotalPages']
+      end
+
+      if attributes.has_key?(:'@TotalResources')
+        self.total_resources = attributes[:'@TotalResources']
       end
     end
 
@@ -61,7 +77,9 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          customer == o.customer
+          current_page == o.current_page &&
+          total_pages == o.total_pages &&
+          total_resources == o.total_resources
     end
 
     # @see the `==` method
@@ -73,7 +91,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [customer].hash
+      [current_page, total_pages, total_resources].hash
     end
 
     # Builds the object from hash
@@ -133,7 +151,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = StandoutFortnox.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

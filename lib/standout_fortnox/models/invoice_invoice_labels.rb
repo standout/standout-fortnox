@@ -12,33 +12,23 @@ Swagger Codegen version: 2.4.12
 
 require 'date'
 
-module SwaggerClient
-  # The properties for this object is listed in the table for “Default Delivery Types”.
-  class CustomerCustomerDefaultDeliveryTypes
-    # Default delivery type for invoices. Can be PRINT EMAIL or PRINTSERVICE.
-    attr_accessor :invoice
-
-    # Default delivery type for offers. Can be PRINT EMAIL or PRINTSERVICE.
-    attr_accessor :offer
-
-    # Default delivery type for orders. Can be PRINT EMAIL or PRINTSERVICE.
-    attr_accessor :order
+module StandoutFortnox
+  # The properties for the object in this array is listed in the table 'Labels'.
+  class InvoiceInvoiceLabels
+    # Id if the label.
+    attr_accessor :id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'invoice' => :'Invoice',
-        :'offer' => :'Offer',
-        :'order' => :'Order'
+        :'id' => :'Id'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'invoice' => :'String',
-        :'offer' => :'String',
-        :'order' => :'String'
+        :'id' => :'Integer'
       }
     end
 
@@ -50,16 +40,8 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'Invoice')
-        self.invoice = attributes[:'Invoice']
-      end
-
-      if attributes.has_key?(:'Offer')
-        self.offer = attributes[:'Offer']
-      end
-
-      if attributes.has_key?(:'Order')
-        self.order = attributes[:'Order']
+      if attributes.has_key?(:'Id')
+        self.id = attributes[:'Id']
       end
     end
 
@@ -81,9 +63,7 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          invoice == o.invoice &&
-          offer == o.offer &&
-          order == o.order
+          id == o.id
     end
 
     # @see the `==` method
@@ -95,7 +75,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [invoice, offer, order].hash
+      [id].hash
     end
 
     # Builds the object from hash
@@ -155,7 +135,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = StandoutFortnox.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

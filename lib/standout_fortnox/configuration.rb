@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.12
 
 require 'uri'
 
-module SwaggerClient
+module StandoutFortnox
   class Configuration
     # Defines url scheme
     attr_accessor :scheme

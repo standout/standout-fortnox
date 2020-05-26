@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.12
 
 require 'date'
 
-module SwaggerClient
+module StandoutFortnox
   # The properties for this object is listed in the table for “Email Information”.
   class InvoiceInvoiceEmailInformation
     # Reply to adress. Must be a valid e-mail address
@@ -275,7 +275,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = StandoutFortnox.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

@@ -1,4 +1,4 @@
-# SwaggerClient::CustomerCustomerDefaultTemplates
+# StandoutFortnox::CustomerCustomerDefaultTemplates
 
 ## Properties
 Name | Type | Description | Notes

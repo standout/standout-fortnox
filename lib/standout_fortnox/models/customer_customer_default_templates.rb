@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.12
 
 require 'date'
 
-module SwaggerClient
+module StandoutFortnox
   # The properties for this object is listed in the table for “Default Templates”.
   class CustomerCustomerDefaultTemplates
     # Default template for cash invoices. Must be a name of an existing print template.
@@ -165,7 +165,7 @@ module SwaggerClient
           end
         end
       else # model
-        temp_model = SwaggerClient.const_get(type).new
+        temp_model = StandoutFortnox.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end
