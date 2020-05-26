@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.email       = [""]
   s.homepage    = "https://github.com/standout/standout-fortnox"
   s.summary     = "A ruby wrapper for the Fortnox API"
-  s.description = "TODO: description"
+  s.description = "description"
   s.license     = 'proprietary'
   s.required_ruby_version = ">= 1.9"
 
