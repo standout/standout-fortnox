@@ -21,11 +21,11 @@ Method | HTTP request | Description
 [**preview_invoice**](InvoicesApi.md#preview_invoice) | **GET** /invoices/{documentNumber}/preview | Preview an invoice
 [**print_invoice**](InvoicesApi.md#print_invoice) | **GET** /invoices/{documentNumber}/print | Print an invoice
 [**print_invoice_reminder**](InvoicesApi.md#print_invoice_reminder) | **GET** /invoices/{documentNumber}/printreminder | Print an invoice reminder
-[**update_invoice**](InvoicesApi.md#update_invoice) | **PUT** /invoices | Update invoice
+[**update_invoice**](InvoicesApi.md#update_invoice) | **PUT** /invoices/{documentNumber} | Update invoice
 
 
 # **add_invoice**
-> add_invoice(body)
+> Invoice add_invoice(body)
 
 Add an invoice
 
@@ -55,7 +55,8 @@ body = StandoutFortnox::Invoice.new # Invoice | Invoice object that needs to be 
 
 begin
   #Add an invoice
-  api_instance.add_invoice(body)
+  result = api_instance.add_invoice(body)
+  p result
 rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->add_invoice: #{e}"
 end
@@ -69,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+[**Invoice**](Invoice.md)
 
 ### Authorization
 
@@ -991,7 +992,7 @@ Name | Type | Description  | Notes
 
 
 # **update_invoice**
-> update_invoice(body)
+> Invoice update_invoice(document_number, body)
 
 Update invoice
 
@@ -1016,12 +1017,15 @@ end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
+document_number = 56 # Integer | documentNumber of invoice to update
+
 body = StandoutFortnox::Invoice.new # Invoice | Invoice object to be updated
 
 
 begin
   #Update invoice
-  api_instance.update_invoice(body)
+  result = api_instance.update_invoice(document_number, body)
+  p result
 rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->update_invoice: #{e}"
 end
@@ -1031,11 +1035,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **document_number** | **Integer**| documentNumber of invoice to update | 
  **body** | [**Invoice**](Invoice.md)| Invoice object to be updated | 
 
 ### Return type
 
-nil (empty response body)
+[**Invoice**](Invoice.md)
 
 ### Authorization
 
