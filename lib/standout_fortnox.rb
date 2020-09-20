@@ -42,10 +42,15 @@ require 'standout_fortnox/models/offer_offer_email_information'
 require 'standout_fortnox/models/offer_offer_offer_rows'
 require 'standout_fortnox/models/offers'
 require 'standout_fortnox/models/offers_offers'
+require 'standout_fortnox/models/voucher'
+require 'standout_fortnox/models/voucher_2'
+require 'standout_fortnox/models/voucher_voucher'
+require 'standout_fortnox/models/voucher_voucher_voucher_rows'
 
 # APIs
 require 'standout_fortnox/api/customers_api'
 require 'standout_fortnox/api/invoices_api'
+require 'standout_fortnox/api/vouchers_api'
 
 module StandoutFortnox
   class << self
