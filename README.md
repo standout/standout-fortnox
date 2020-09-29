@@ -113,6 +113,7 @@ Class | Method | HTTP request | Description
 *StandoutFortnox::InvoicesApi* | [**print_invoice**](docs/InvoicesApi.md#print_invoice) | **GET** /invoices/{documentNumber}/print | Print an invoice
 *StandoutFortnox::InvoicesApi* | [**print_invoice_reminder**](docs/InvoicesApi.md#print_invoice_reminder) | **GET** /invoices/{documentNumber}/printreminder | Print an invoice reminder
 *StandoutFortnox::InvoicesApi* | [**update_invoice**](docs/InvoicesApi.md#update_invoice) | **PUT** /invoices/{documentNumber} | Update invoice
+*StandoutFortnox::VouchersApi* | [**add_voucher**](docs/VouchersApi.md#add_voucher) | **POST** /vouchers | Create a voucher
 
 
 ## Documentation for Models
@@ -142,6 +143,10 @@ Class | Method | HTTP request | Description
  - [StandoutFortnox::OfferOfferOfferRows](docs/OfferOfferOfferRows.md)
  - [StandoutFortnox::Offers](docs/Offers.md)
  - [StandoutFortnox::OffersOffers](docs/OffersOffers.md)
+ - [StandoutFortnox::Voucher](docs/Voucher.md)
+ - [StandoutFortnox::Voucher2](docs/Voucher2.md)
+ - [StandoutFortnox::VoucherVoucher](docs/VoucherVoucher.md)
+ - [StandoutFortnox::VoucherVoucherVoucherRows](docs/VoucherVoucherVoucherRows.md)
 
 
 ## Documentation for Authorization
