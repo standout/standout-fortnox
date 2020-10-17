@@ -13,24 +13,20 @@ Swagger Codegen version: 2.4.14
 require 'date'
 
 module StandoutFortnox
-  class Customers
-    attr_accessor :customers
-
-    attr_accessor :meta_information
+  class InvoicePayment
+    attr_accessor :invoice_payment
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'customers' => :'Customers',
-        :'meta_information' => :'MetaInformation'
+        :'invoice_payment' => :'InvoicePayment'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'customers' => :'Array<CustomersCustomers>',
-        :'meta_information' => :'MetaInformation'
+        :'invoice_payment' => :'InvoicePaymentInvoicePayment'
       }
     end
 
@@ -42,14 +38,8 @@ module StandoutFortnox
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'Customers')
-        if (value = attributes[:'Customers']).is_a?(Array)
-          self.customers = value
-        end
-      end
-
-      if attributes.has_key?(:'MetaInformation')
-        self.meta_information = attributes[:'MetaInformation']
+      if attributes.has_key?(:'InvoicePayment')
+        self.invoice_payment = attributes[:'InvoicePayment']
       end
     end
 
@@ -71,8 +61,7 @@ module StandoutFortnox
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          customers == o.customers &&
-          meta_information == o.meta_information
+          invoice_payment == o.invoice_payment
     end
 
     # @see the `==` method
@@ -84,7 +73,7 @@ module StandoutFortnox
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [customers, meta_information].hash
+      [invoice_payment].hash
     end
 
     # Builds the object from hash
