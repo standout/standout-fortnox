@@ -43,7 +43,7 @@ module StandoutFortnox
         fail ArgumentError, "Missing the required parameter 'body' when calling InvoicePaymentsApi.add_invoice_payment"
       end
       # resource path
-      local_var_path = '/invoice_payments'
+      local_var_path = '/invoicepayments'
 
       # query parameters
       query_params = {}
@@ -97,7 +97,7 @@ module StandoutFortnox
         fail ArgumentError, "Missing the required parameter 'number' when calling InvoicePaymentsApi.bookkeep_invoice_payment"
       end
       # resource path
-      local_var_path = '/invoice_payments/{Number}/bookkeep'.sub('{' + 'Number' + '}', number.to_s)
+      local_var_path = '/invoicepayments/{Number}/bookkeep'.sub('{' + 'Number' + '}', number.to_s)
 
       # query parameters
       query_params = {}
@@ -146,7 +146,7 @@ module StandoutFortnox
         fail ArgumentError, "Missing the required parameter 'number' when calling InvoicePaymentsApi.get_invoice_payment"
       end
       # resource path
-      local_var_path = '/invoice_payments/{Number}'.sub('{' + 'Number' + '}', number.to_s)
+      local_var_path = '/invoicepayments/{Number}'.sub('{' + 'Number' + '}', number.to_s)
 
       # query parameters
       query_params = {}
@@ -200,7 +200,7 @@ module StandoutFortnox
         fail ArgumentError, "Missing the required parameter 'number' when calling InvoicePaymentsApi.remove_invoice_payment"
       end
       # resource path
-      local_var_path = '/invoice_payments/{Number}'.sub('{' + 'Number' + '}', number.to_s)
+      local_var_path = '/invoicepayments/{Number}'.sub('{' + 'Number' + '}', number.to_s)
 
       # query parameters
       query_params = {}
@@ -255,7 +255,7 @@ module StandoutFortnox
         fail ArgumentError, "Missing the required parameter 'body' when calling InvoicePaymentsApi.update_invoice_payment"
       end
       # resource path
-      local_var_path = '/invoice_payments/{Number}'.sub('{' + 'Number' + '}', number.to_s)
+      local_var_path = '/invoicepayments/{Number}'.sub('{' + 'Number' + '}', number.to_s)
 
       # query parameters
       query_params = {}

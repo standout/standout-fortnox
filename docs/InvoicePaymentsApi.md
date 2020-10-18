@@ -4,11 +4,11 @@ All URIs are relative to *https://api.fortnox.se/3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_invoice_payment**](InvoicePaymentsApi.md#add_invoice_payment) | **POST** /invoice_payments | Creates an invoice payment
-[**bookkeep_invoice_payment**](InvoicePaymentsApi.md#bookkeep_invoice_payment) | **PUT** /invoice_payments/{Number}/bookkeep | Bookkeeps the invoice payment
-[**get_invoice_payment**](InvoicePaymentsApi.md#get_invoice_payment) | **GET** /invoice_payments/{Number} | Retrieves a single invoice payment
-[**remove_invoice_payment**](InvoicePaymentsApi.md#remove_invoice_payment) | **DELETE** /invoice_payments/{Number} | Removes an invoice payment
-[**update_invoice_payment**](InvoicePaymentsApi.md#update_invoice_payment) | **PUT** /invoice_payments/{Number} | Updates an invoice payment
+[**add_invoice_payment**](InvoicePaymentsApi.md#add_invoice_payment) | **POST** /invoicepayments | Creates an invoice payment
+[**bookkeep_invoice_payment**](InvoicePaymentsApi.md#bookkeep_invoice_payment) | **PUT** /invoicepayments/{Number}/bookkeep | Bookkeeps the invoice payment
+[**get_invoice_payment**](InvoicePaymentsApi.md#get_invoice_payment) | **GET** /invoicepayments/{Number} | Retrieves a single invoice payment
+[**remove_invoice_payment**](InvoicePaymentsApi.md#remove_invoice_payment) | **DELETE** /invoicepayments/{Number} | Removes an invoice payment
+[**update_invoice_payment**](InvoicePaymentsApi.md#update_invoice_payment) | **PUT** /invoicepayments/{Number} | Updates an invoice payment
 
 
 # **add_invoice_payment**
