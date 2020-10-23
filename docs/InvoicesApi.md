@@ -603,7 +603,7 @@ Name | Type | Description  | Notes
 
 
 # **get_invoices**
-> Invoices get_invoices
+> Invoices get_invoices(opts)
 
 Get all invoices
 
@@ -628,9 +628,13 @@ end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
+opts = { 
+  filter: nil # Object | Retrieves all invoices matching given filter
+}
+
 begin
   #Get all invoices
-  result = api_instance.get_invoices
+  result = api_instance.get_invoices(opts)
   p result
 rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->get_invoices: #{e}"
@@ -638,7 +642,10 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | [**Object**](.md)| Retrieves all invoices matching given filter | [optional] 
 
 ### Return type
 

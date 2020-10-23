@@ -532,6 +532,7 @@ module StandoutFortnox
     # Get all invoices
     # Get all invoices
     # @param [Hash] opts the optional parameters
+    # @option opts [Object] :filter Retrieves all invoices matching given filter
     # @return [Invoices]
     def get_invoices(opts = {})
       data, _status_code, _headers = get_invoices_with_http_info(opts)
@@ -541,6 +542,7 @@ module StandoutFortnox
     # Get all invoices
     # Get all invoices
     # @param [Hash] opts the optional parameters
+    # @option opts [Object] :filter Retrieves all invoices matching given filter
     # @return [Array<(Invoices, Fixnum, Hash)>] Invoices data, response status code and response headers
     def get_invoices_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -551,6 +553,7 @@ module StandoutFortnox
 
       # query parameters
       query_params = {}
+      query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
 
       # header parameters
       header_params = {}

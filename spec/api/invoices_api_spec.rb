@@ -154,6 +154,7 @@ describe 'InvoicesApi' do
   # Get all invoices
   # Get all invoices
   # @param [Hash] opts the optional parameters
+  # @option opts [Object] :filter Retrieves all invoices matching given filter
   # @return [Invoices]
   describe 'get_invoices test' do
     it 'should work' do
