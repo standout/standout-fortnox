@@ -629,7 +629,15 @@ end
 api_instance = StandoutFortnox::InvoicesApi.new
 
 opts = { 
-  filter: nil # Object | Retrieves all invoices matching given filter
+  filter: nil, # Object | Retrieves all invoices matching given filter
+  offset: nil, # Object | Retrieves all invoices matching given filter
+  limit: nil, # Object | Retrieves all invoices matching given filter
+  sortby: nil, # Object | Retrieves all invoices matching given filter
+  sortorder: nil, # Object | Retrieves all invoices matching given filter
+  page: nil, # Object | 
+  lastmodified: nil, # Object | Retrieves all records since the provided timestamp
+  fromdate: nil, # Object | Defines a selection based on a start date.
+  todate: nil # Object | Defines a selection based on an end date.
 }
 
 begin
@@ -646,6 +654,14 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter** | [**Object**](.md)| Retrieves all invoices matching given filter | [optional] 
+ **offset** | [**Object**](.md)| Retrieves all invoices matching given filter | [optional] 
+ **limit** | [**Object**](.md)| Retrieves all invoices matching given filter | [optional] 
+ **sortby** | [**Object**](.md)| Retrieves all invoices matching given filter | [optional] 
+ **sortorder** | [**Object**](.md)| Retrieves all invoices matching given filter | [optional] 
+ **page** | [**Object**](.md)|  | [optional] 
+ **lastmodified** | [**Object**](.md)| Retrieves all records since the provided timestamp | [optional] 
+ **fromdate** | [**Object**](.md)| Defines a selection based on a start date. | [optional] 
+ **todate** | [**Object**](.md)| Defines a selection based on an end date. | [optional] 
 
 ### Return type
 

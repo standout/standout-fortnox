@@ -155,6 +155,14 @@ describe 'InvoicesApi' do
   # Get all invoices
   # @param [Hash] opts the optional parameters
   # @option opts [Object] :filter Retrieves all invoices matching given filter
+  # @option opts [Object] :offset Retrieves all invoices matching given filter
+  # @option opts [Object] :limit Retrieves all invoices matching given filter
+  # @option opts [Object] :sortby Retrieves all invoices matching given filter
+  # @option opts [Object] :sortorder Retrieves all invoices matching given filter
+  # @option opts [Object] :page 
+  # @option opts [Object] :lastmodified Retrieves all records since the provided timestamp
+  # @option opts [Object] :fromdate Defines a selection based on a start date.
+  # @option opts [Object] :todate Defines a selection based on an end date.
   # @return [Invoices]
   describe 'get_invoices test' do
     it 'should work' do

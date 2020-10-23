@@ -533,6 +533,14 @@ module StandoutFortnox
     # Get all invoices
     # @param [Hash] opts the optional parameters
     # @option opts [Object] :filter Retrieves all invoices matching given filter
+    # @option opts [Object] :offset Retrieves all invoices matching given filter
+    # @option opts [Object] :limit Retrieves all invoices matching given filter
+    # @option opts [Object] :sortby Retrieves all invoices matching given filter
+    # @option opts [Object] :sortorder Retrieves all invoices matching given filter
+    # @option opts [Object] :page 
+    # @option opts [Object] :lastmodified Retrieves all records since the provided timestamp
+    # @option opts [Object] :fromdate Defines a selection based on a start date.
+    # @option opts [Object] :todate Defines a selection based on an end date.
     # @return [Invoices]
     def get_invoices(opts = {})
       data, _status_code, _headers = get_invoices_with_http_info(opts)
@@ -543,6 +551,14 @@ module StandoutFortnox
     # Get all invoices
     # @param [Hash] opts the optional parameters
     # @option opts [Object] :filter Retrieves all invoices matching given filter
+    # @option opts [Object] :offset Retrieves all invoices matching given filter
+    # @option opts [Object] :limit Retrieves all invoices matching given filter
+    # @option opts [Object] :sortby Retrieves all invoices matching given filter
+    # @option opts [Object] :sortorder Retrieves all invoices matching given filter
+    # @option opts [Object] :page 
+    # @option opts [Object] :lastmodified Retrieves all records since the provided timestamp
+    # @option opts [Object] :fromdate Defines a selection based on a start date.
+    # @option opts [Object] :todate Defines a selection based on an end date.
     # @return [Array<(Invoices, Fixnum, Hash)>] Invoices data, response status code and response headers
     def get_invoices_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -554,6 +570,14 @@ module StandoutFortnox
       # query parameters
       query_params = {}
       query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
+      query_params[:'offset'] = opts[:'offset'] if !opts[:'offset'].nil?
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'sortby'] = opts[:'sortby'] if !opts[:'sortby'].nil?
+      query_params[:'sortorder'] = opts[:'sortorder'] if !opts[:'sortorder'].nil?
+      query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
+      query_params[:'lastmodified'] = opts[:'lastmodified'] if !opts[:'lastmodified'].nil?
+      query_params[:'fromdate'] = opts[:'fromdate'] if !opts[:'fromdate'].nil?
+      query_params[:'todate'] = opts[:'todate'] if !opts[:'todate'].nil?
 
       # header parameters
       header_params = {}

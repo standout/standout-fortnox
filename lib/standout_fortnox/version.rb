@@ -11,5 +11,5 @@ Swagger Codegen version: 2.4.14
 =end
 
 module StandoutFortnox
-  VERSION = '1.2.0'
+  VERSION = '1.3.0'
 end
