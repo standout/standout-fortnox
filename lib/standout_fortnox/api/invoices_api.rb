@@ -533,14 +533,26 @@ module StandoutFortnox
     # Get all invoices
     # @param [Hash] opts the optional parameters
     # @option opts [Object] :filter Retrieves all invoices matching given filter
-    # @option opts [Object] :offset Retrieves all invoices matching given filter
-    # @option opts [Object] :limit Retrieves all invoices matching given filter
-    # @option opts [Object] :sortby Retrieves all invoices matching given filter
-    # @option opts [Object] :sortorder Retrieves all invoices matching given filter
+    # @option opts [Object] :offset 
+    # @option opts [Object] :limit 
+    # @option opts [Object] :sortby Which property to sort by, must be defined as sortable in documentation
+    # @option opts [Object] :sortorder 
     # @option opts [Object] :page 
     # @option opts [Object] :lastmodified Retrieves all records since the provided timestamp
     # @option opts [Object] :fromdate Defines a selection based on a start date.
     # @option opts [Object] :todate Defines a selection based on an end date.
+    # @option opts [Object] :costcenter Get only invoices inluding given value for CostCenter
+    # @option opts [Object] :currency Get only invoices inluding given value for Currency
+    # @option opts [Object] :customername Get only invoices inluding given value for CustomerName
+    # @option opts [Object] :customernumber Get only invoices inluding given value for CustomerNumber
+    # @option opts [Object] :documentnumber Get only invoices inluding given value for DocumentNumber
+    # @option opts [Object] :externalinvoicereference1 Get only invoices inluding given value for ExternalInvoiceReference1
+    # @option opts [Object] :externalinvoicereference2 Get only invoices inluding given value for ExternalInvoiceReference2
+    # @option opts [Object] :ocr Get only invoices inluding given value for OCR
+    # @option opts [Object] :ourreference Get only invoices inluding given value for OurReference
+    # @option opts [Object] :project Get only invoices inluding given value for Project
+    # @option opts [Object] :yourordernumber Get only invoices inluding given value for YourOrderNumber
+    # @option opts [Object] :yourreference Get only invoices inluding given value for YourReference
     # @return [Invoices]
     def get_invoices(opts = {})
       data, _status_code, _headers = get_invoices_with_http_info(opts)
@@ -551,14 +563,26 @@ module StandoutFortnox
     # Get all invoices
     # @param [Hash] opts the optional parameters
     # @option opts [Object] :filter Retrieves all invoices matching given filter
-    # @option opts [Object] :offset Retrieves all invoices matching given filter
-    # @option opts [Object] :limit Retrieves all invoices matching given filter
-    # @option opts [Object] :sortby Retrieves all invoices matching given filter
-    # @option opts [Object] :sortorder Retrieves all invoices matching given filter
+    # @option opts [Object] :offset 
+    # @option opts [Object] :limit 
+    # @option opts [Object] :sortby Which property to sort by, must be defined as sortable in documentation
+    # @option opts [Object] :sortorder 
     # @option opts [Object] :page 
     # @option opts [Object] :lastmodified Retrieves all records since the provided timestamp
     # @option opts [Object] :fromdate Defines a selection based on a start date.
     # @option opts [Object] :todate Defines a selection based on an end date.
+    # @option opts [Object] :costcenter Get only invoices inluding given value for CostCenter
+    # @option opts [Object] :currency Get only invoices inluding given value for Currency
+    # @option opts [Object] :customername Get only invoices inluding given value for CustomerName
+    # @option opts [Object] :customernumber Get only invoices inluding given value for CustomerNumber
+    # @option opts [Object] :documentnumber Get only invoices inluding given value for DocumentNumber
+    # @option opts [Object] :externalinvoicereference1 Get only invoices inluding given value for ExternalInvoiceReference1
+    # @option opts [Object] :externalinvoicereference2 Get only invoices inluding given value for ExternalInvoiceReference2
+    # @option opts [Object] :ocr Get only invoices inluding given value for OCR
+    # @option opts [Object] :ourreference Get only invoices inluding given value for OurReference
+    # @option opts [Object] :project Get only invoices inluding given value for Project
+    # @option opts [Object] :yourordernumber Get only invoices inluding given value for YourOrderNumber
+    # @option opts [Object] :yourreference Get only invoices inluding given value for YourReference
     # @return [Array<(Invoices, Fixnum, Hash)>] Invoices data, response status code and response headers
     def get_invoices_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -578,6 +602,18 @@ module StandoutFortnox
       query_params[:'lastmodified'] = opts[:'lastmodified'] if !opts[:'lastmodified'].nil?
       query_params[:'fromdate'] = opts[:'fromdate'] if !opts[:'fromdate'].nil?
       query_params[:'todate'] = opts[:'todate'] if !opts[:'todate'].nil?
+      query_params[:'costcenter'] = opts[:'costcenter'] if !opts[:'costcenter'].nil?
+      query_params[:'currency'] = opts[:'currency'] if !opts[:'currency'].nil?
+      query_params[:'customername'] = opts[:'customername'] if !opts[:'customername'].nil?
+      query_params[:'customernumber'] = opts[:'customernumber'] if !opts[:'customernumber'].nil?
+      query_params[:'documentnumber'] = opts[:'documentnumber'] if !opts[:'documentnumber'].nil?
+      query_params[:'externalinvoicereference1'] = opts[:'externalinvoicereference1'] if !opts[:'externalinvoicereference1'].nil?
+      query_params[:'externalinvoicereference2'] = opts[:'externalinvoicereference2'] if !opts[:'externalinvoicereference2'].nil?
+      query_params[:'ocr'] = opts[:'ocr'] if !opts[:'ocr'].nil?
+      query_params[:'ourreference'] = opts[:'ourreference'] if !opts[:'ourreference'].nil?
+      query_params[:'project'] = opts[:'project'] if !opts[:'project'].nil?
+      query_params[:'yourordernumber'] = opts[:'yourordernumber'] if !opts[:'yourordernumber'].nil?
+      query_params[:'yourreference'] = opts[:'yourreference'] if !opts[:'yourreference'].nil?
 
       # header parameters
       header_params = {}
