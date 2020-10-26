@@ -603,7 +603,7 @@ Name | Type | Description  | Notes
 
 
 # **get_invoices**
-> Invoices get_invoices
+> Invoices get_invoices(opts)
 
 Get all invoices
 
@@ -628,9 +628,33 @@ end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
+opts = { 
+  filter: nil, # Object | Retrieves all invoices matching given filter
+  offset: nil, # Object | 
+  limit: nil, # Object | 
+  sortby: nil, # Object | Which property to sort by, must be defined as sortable in documentation
+  sortorder: nil, # Object | 
+  page: nil, # Object | 
+  lastmodified: nil, # Object | Retrieves all records since the provided timestamp
+  fromdate: nil, # Object | Defines a selection based on a start date.
+  todate: nil, # Object | Defines a selection based on an end date.
+  costcenter: nil, # Object | Get only invoices inluding given value for CostCenter
+  currency: nil, # Object | Get only invoices inluding given value for Currency
+  customername: nil, # Object | Get only invoices inluding given value for CustomerName
+  customernumber: nil, # Object | Get only invoices inluding given value for CustomerNumber
+  documentnumber: nil, # Object | Get only invoices inluding given value for DocumentNumber
+  externalinvoicereference1: nil, # Object | Get only invoices inluding given value for ExternalInvoiceReference1
+  externalinvoicereference2: nil, # Object | Get only invoices inluding given value for ExternalInvoiceReference2
+  ocr: nil, # Object | Get only invoices inluding given value for OCR
+  ourreference: nil, # Object | Get only invoices inluding given value for OurReference
+  project: nil, # Object | Get only invoices inluding given value for Project
+  yourordernumber: nil, # Object | Get only invoices inluding given value for YourOrderNumber
+  yourreference: nil # Object | Get only invoices inluding given value for YourReference
+}
+
 begin
   #Get all invoices
-  result = api_instance.get_invoices
+  result = api_instance.get_invoices(opts)
   p result
 rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->get_invoices: #{e}"
@@ -638,7 +662,30 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | [**Object**](.md)| Retrieves all invoices matching given filter | [optional] 
+ **offset** | [**Object**](.md)|  | [optional] 
+ **limit** | [**Object**](.md)|  | [optional] 
+ **sortby** | [**Object**](.md)| Which property to sort by, must be defined as sortable in documentation | [optional] 
+ **sortorder** | [**Object**](.md)|  | [optional] 
+ **page** | [**Object**](.md)|  | [optional] 
+ **lastmodified** | [**Object**](.md)| Retrieves all records since the provided timestamp | [optional] 
+ **fromdate** | [**Object**](.md)| Defines a selection based on a start date. | [optional] 
+ **todate** | [**Object**](.md)| Defines a selection based on an end date. | [optional] 
+ **costcenter** | [**Object**](.md)| Get only invoices inluding given value for CostCenter | [optional] 
+ **currency** | [**Object**](.md)| Get only invoices inluding given value for Currency | [optional] 
+ **customername** | [**Object**](.md)| Get only invoices inluding given value for CustomerName | [optional] 
+ **customernumber** | [**Object**](.md)| Get only invoices inluding given value for CustomerNumber | [optional] 
+ **documentnumber** | [**Object**](.md)| Get only invoices inluding given value for DocumentNumber | [optional] 
+ **externalinvoicereference1** | [**Object**](.md)| Get only invoices inluding given value for ExternalInvoiceReference1 | [optional] 
+ **externalinvoicereference2** | [**Object**](.md)| Get only invoices inluding given value for ExternalInvoiceReference2 | [optional] 
+ **ocr** | [**Object**](.md)| Get only invoices inluding given value for OCR | [optional] 
+ **ourreference** | [**Object**](.md)| Get only invoices inluding given value for OurReference | [optional] 
+ **project** | [**Object**](.md)| Get only invoices inluding given value for Project | [optional] 
+ **yourordernumber** | [**Object**](.md)| Get only invoices inluding given value for YourOrderNumber | [optional] 
+ **yourreference** | [**Object**](.md)| Get only invoices inluding given value for YourReference | [optional] 
 
 ### Return type
 
