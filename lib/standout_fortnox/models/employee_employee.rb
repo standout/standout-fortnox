@@ -56,6 +56,9 @@ module StandoutFortnox
     # Email address
     attr_accessor :email
 
+    # Startdate of employment
+    attr_accessor :employment_date
+
     # Type of employment. Validates against allowed values specified below.
     attr_accessor :employment_form
 
@@ -110,6 +113,9 @@ module StandoutFortnox
     # Average hourly wage
     attr_accessor :average_hourly_wage
 
+    # Enddate of employment
+    attr_accessor :employed_to
+
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -149,6 +155,7 @@ module StandoutFortnox
         :'phone1' => :'Phone1',
         :'phone2' => :'Phone2',
         :'email' => :'Email',
+        :'employment_date' => :'EmploymentDate',
         :'employment_form' => :'EmploymentForm',
         :'salary_form' => :'SalaryForm',
         :'job_title' => :'JobTitle',
@@ -166,7 +173,8 @@ module StandoutFortnox
         :'clearing_no' => :'ClearingNo',
         :'bank_account_no' => :'BankAccountNo',
         :'average_weekly_hours' => :'AverageWeeklyHours',
-        :'average_hourly_wage' => :'AverageHourlyWage'
+        :'average_hourly_wage' => :'AverageHourlyWage',
+        :'employed_to' => :'EmployedTo'
       }
     end
 
@@ -187,6 +195,7 @@ module StandoutFortnox
         :'phone1' => :'String',
         :'phone2' => :'String',
         :'email' => :'String',
+        :'employment_date' => :'Date',
         :'employment_form' => :'String',
         :'salary_form' => :'String',
         :'job_title' => :'String',
@@ -204,7 +213,8 @@ module StandoutFortnox
         :'clearing_no' => :'String',
         :'bank_account_no' => :'String',
         :'average_weekly_hours' => :'Float',
-        :'average_hourly_wage' => :'Float'
+        :'average_hourly_wage' => :'Float',
+        :'employed_to' => :'Date'
       }
     end
 
@@ -270,6 +280,10 @@ module StandoutFortnox
 
       if attributes.has_key?(:'Email')
         self.email = attributes[:'Email']
+      end
+
+      if attributes.has_key?(:'EmploymentDate')
+        self.employment_date = attributes[:'EmploymentDate']
       end
 
       if attributes.has_key?(:'EmploymentForm')
@@ -342,6 +356,10 @@ module StandoutFortnox
 
       if attributes.has_key?(:'AverageHourlyWage')
         self.average_hourly_wage = attributes[:'AverageHourlyWage']
+      end
+
+      if attributes.has_key?(:'EmployedTo')
+        self.employed_to = attributes[:'EmployedTo']
       end
     end
 
@@ -487,6 +505,7 @@ module StandoutFortnox
           phone1 == o.phone1 &&
           phone2 == o.phone2 &&
           email == o.email &&
+          employment_date == o.employment_date &&
           employment_form == o.employment_form &&
           salary_form == o.salary_form &&
           job_title == o.job_title &&
@@ -504,7 +523,8 @@ module StandoutFortnox
           clearing_no == o.clearing_no &&
           bank_account_no == o.bank_account_no &&
           average_weekly_hours == o.average_weekly_hours &&
-          average_hourly_wage == o.average_hourly_wage
+          average_hourly_wage == o.average_hourly_wage &&
+          employed_to == o.employed_to
     end
 
     # @see the `==` method
@@ -516,7 +536,7 @@ module StandoutFortnox
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [url, employee_id, personal_identity_number, first_name, last_name, full_name, address1, address2, post_code, city, country, phone1, phone2, email, employment_form, salary_form, job_title, personel_type, inactive, schedule_id, fora_type, monthly_salary, hourly_pay, tax_allowance, tax_table, tax_column, auto_non_recurring_tax, non_recurring_tax, clearing_no, bank_account_no, average_weekly_hours, average_hourly_wage].hash
+      [url, employee_id, personal_identity_number, first_name, last_name, full_name, address1, address2, post_code, city, country, phone1, phone2, email, employment_date, employment_form, salary_form, job_title, personel_type, inactive, schedule_id, fora_type, monthly_salary, hourly_pay, tax_allowance, tax_table, tax_column, auto_non_recurring_tax, non_recurring_tax, clearing_no, bank_account_no, average_weekly_hours, average_hourly_wage, employed_to].hash
     end
 
     # Builds the object from hash

@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **phone1** | **String** | Phone number | [optional] 
 **phone2** | **String** | Phone number 2 | [optional] 
 **email** | **String** | Email address | [optional] 
+**employment_date** | **Date** | Startdate of employment | [optional] 
 **employment_form** | **String** | Type of employment. Validates against allowed values specified below. | [optional] 
 **salary_form** | **String** | Type of salary form. Validates against allowed values specified below. | [optional] 
 **job_title** | **String** | Job title | [optional] 
@@ -35,5 +36,6 @@ Name | Type | Description | Notes
 **bank_account_no** | **String** | Bankaccount number | [optional] 
 **average_weekly_hours** | **Float** | Average weekly hours | [optional] 
 **average_hourly_wage** | **Float** | Average hourly wage | [optional] 
+**employed_to** | **Date** | Enddate of employment | [optional] 
 
 
