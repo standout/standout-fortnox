@@ -13,66 +13,20 @@ Swagger Codegen version: 2.4.14
 require 'date'
 
 module StandoutFortnox
-  class OffersOffers
-    # Direct url to the record and URL to Taxreduction for the offer (URL to Taxreduction shows even if – Taxreduction is connected to offer)
-    attr_accessor :url
-
-    # If the offer is cancelled
-    attr_accessor :cancelled
-
-    # Currency
-    attr_accessor :currency
-
-    # Customer name
-    attr_accessor :customer_name
-
-    # Customer number
-    attr_accessor :customer_number
-
-    # Document Number
-    attr_accessor :document_number
-
-    # Date of offer
-    attr_accessor :offer_date
-
-    # Project code
-    attr_accessor :project
-
-    # If document is printed or e-mailed to customer
-    attr_accessor :sent
-
-    # Total amount
-    attr_accessor :total
+  class Employee
+    attr_accessor :employee
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'url' => :'@url',
-        :'cancelled' => :'Cancelled',
-        :'currency' => :'Currency',
-        :'customer_name' => :'CustomerName',
-        :'customer_number' => :'CustomerNumber',
-        :'document_number' => :'DocumentNumber',
-        :'offer_date' => :'OfferDate',
-        :'project' => :'Project',
-        :'sent' => :'Sent',
-        :'total' => :'Total'
+        :'employee' => :'Employee'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'url' => :'String',
-        :'cancelled' => :'BOOLEAN',
-        :'currency' => :'String',
-        :'customer_name' => :'String',
-        :'customer_number' => :'String',
-        :'document_number' => :'Integer',
-        :'offer_date' => :'Date',
-        :'project' => :'String',
-        :'sent' => :'BOOLEAN',
-        :'total' => :'Float'
+        :'employee' => :'EmployeeEmployee'
       }
     end
 
@@ -84,44 +38,8 @@ module StandoutFortnox
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'@url')
-        self.url = attributes[:'@url']
-      end
-
-      if attributes.has_key?(:'Cancelled')
-        self.cancelled = attributes[:'Cancelled']
-      end
-
-      if attributes.has_key?(:'Currency')
-        self.currency = attributes[:'Currency']
-      end
-
-      if attributes.has_key?(:'CustomerName')
-        self.customer_name = attributes[:'CustomerName']
-      end
-
-      if attributes.has_key?(:'CustomerNumber')
-        self.customer_number = attributes[:'CustomerNumber']
-      end
-
-      if attributes.has_key?(:'DocumentNumber')
-        self.document_number = attributes[:'DocumentNumber']
-      end
-
-      if attributes.has_key?(:'OfferDate')
-        self.offer_date = attributes[:'OfferDate']
-      end
-
-      if attributes.has_key?(:'Project')
-        self.project = attributes[:'Project']
-      end
-
-      if attributes.has_key?(:'Sent')
-        self.sent = attributes[:'Sent']
-      end
-
-      if attributes.has_key?(:'Total')
-        self.total = attributes[:'Total']
+      if attributes.has_key?(:'Employee')
+        self.employee = attributes[:'Employee']
       end
     end
 
@@ -129,28 +47,13 @@ module StandoutFortnox
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@currency.nil? && @currency.to_s.length > 3
-        invalid_properties.push('invalid value for "currency", the character length must be smaller than or equal to 3.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if !@currency.nil? && @currency.to_s.length > 3
       true
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] currency Value to be assigned
-    def currency=(currency)
-      if !currency.nil? && currency.to_s.length > 3
-        fail ArgumentError, 'invalid value for "currency", the character length must be smaller than or equal to 3.'
-      end
-
-      @currency = currency
     end
 
     # Checks equality by comparing each attribute.
@@ -158,16 +61,7 @@ module StandoutFortnox
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          url == o.url &&
-          cancelled == o.cancelled &&
-          currency == o.currency &&
-          customer_name == o.customer_name &&
-          customer_number == o.customer_number &&
-          document_number == o.document_number &&
-          offer_date == o.offer_date &&
-          project == o.project &&
-          sent == o.sent &&
-          total == o.total
+          employee == o.employee
     end
 
     # @see the `==` method
@@ -179,7 +73,7 @@ module StandoutFortnox
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [url, cancelled, currency, customer_name, customer_number, document_number, offer_date, project, sent, total].hash
+      [employee].hash
     end
 
     # Builds the object from hash
