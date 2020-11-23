@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_voucher**](VouchersApi.md#add_voucher) | **POST** /vouchers | Create a voucher
 
-
 # **add_voucher**
 > Voucher add_voucher(body)
 
@@ -32,7 +31,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::VouchersApi.new
-
 body = StandoutFortnox::Voucher.new # Voucher | Voucher object to create
 
 

@@ -17,4 +17,3 @@ Name | Type | Description | Notes
 **approval_state** | **Integer** | The approval state f the voucher. Not for approval: 0 Not ready for approval: 1 Not approved: 2 Approved: 3 | [optional] 
 **voucher_rows** | [**Array&lt;VoucherVoucherVoucherRows&gt;**](VoucherVoucherVoucherRows.md) |  | [optional] 
 
-

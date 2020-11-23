@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **hourly_pay** | **Float** | Hourly pay | [optional] 
 **tax_allowance** | **String** | Tax allowance. Validates against allowed values specified below. | [optional] 
 **tax_table** | **Float** | Tax table | [optional] 
-**tax_column** | **Float** | Tax column | [optional] 
+**tax_column** | [**BigDecimal**](BigDecimal.md) | Tax column | [optional] 
 **auto_non_recurring_tax** | **BOOLEAN** | Auto non recurring tax | [optional] 
 **non_recurring_tax** | **Float** | Non-recurring tax % | [optional] 
 **clearing_no** | **String** | Clearing number | [optional] 
@@ -37,5 +37,4 @@ Name | Type | Description | Notes
 **average_weekly_hours** | **Float** | Average weekly hours | [optional] 
 **average_hourly_wage** | **Float** | Average hourly wage | [optional] 
 **employed_to** | **Date** | Enddate of employment | [optional] 
-
 

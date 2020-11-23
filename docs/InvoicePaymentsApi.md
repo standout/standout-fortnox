@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**remove_invoice_payment**](InvoicePaymentsApi.md#remove_invoice_payment) | **DELETE** /invoicepayments/{Number} | Removes an invoice payment
 [**update_invoice_payment**](InvoicePaymentsApi.md#update_invoice_payment) | **PUT** /invoicepayments/{Number} | Updates an invoice payment
 
-
 # **add_invoice_payment**
 > InvoicePayment add_invoice_payment(body)
 
@@ -36,7 +35,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicePaymentsApi.new
-
 body = StandoutFortnox::InvoicePayment.new # InvoicePayment | Invoice payment object that should be added
 
 
@@ -95,7 +93,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicePaymentsApi.new
-
 number = 56 # Integer | Numeric id of the invoice payment
 
 
@@ -153,7 +150,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicePaymentsApi.new
-
 number = 56 # Integer | Numeric id of the invoice payment
 
 
@@ -182,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -212,7 +208,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicePaymentsApi.new
-
 number = 56 # Integer | Numeric id of the invoice payment
 
 
@@ -246,7 +241,7 @@ nil (empty response body)
 
 
 # **update_invoice_payment**
-> InvoicePayment update_invoice_payment(number, body)
+> InvoicePayment update_invoice_payment(bodynumber)
 
 Updates an invoice payment
 
@@ -270,15 +265,13 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicePaymentsApi.new
-
-number = 56 # Integer | Numeric id of the invoice payment
-
 body = StandoutFortnox::InvoicePayment.new # InvoicePayment | Invoice payment object that should be added
+number = 56 # Integer | Numeric id of the invoice payment
 
 
 begin
   #Updates an invoice payment
-  result = api_instance.update_invoice_payment(number, body)
+  result = api_instance.update_invoice_payment(bodynumber)
   p result
 rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicePaymentsApi->update_invoice_payment: #{e}"
@@ -289,8 +282,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **number** | **Integer**| Numeric id of the invoice payment | 
  **body** | [**InvoicePayment**](InvoicePayment.md)| Invoice payment object that should be added | 
+ **number** | **Integer**| Numeric id of the invoice payment | 
 
 ### Return type
 

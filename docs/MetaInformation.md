@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **total_pages** | **Integer** |  | [optional] 
 **total_resources** | **Integer** |  | [optional] 
 
-

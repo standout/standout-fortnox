@@ -23,4 +23,3 @@ Name | Type | Description | Notes
 **unit** | **String** | Code of the unit for the row. The code must be of an existing unit. | [optional] 
 **vat** | **Integer** | VAT percentage of the row. The percentage needs to be of an existing VAT percentage. | [optional] 
 
-

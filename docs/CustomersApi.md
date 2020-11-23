@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**get_inactive_customers**](CustomersApi.md#get_inactive_customers) | **GET** /customers/?filter&#x3D;inactive | Check for inactive customers
 [**update_customer**](CustomersApi.md#update_customer) | **PUT** /customers/{customerId} | Update customer
 
-
 # **add_customer**
 > Customers add_customer(body)
 
@@ -38,7 +37,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::CustomersApi.new
-
 body = StandoutFortnox::Customers.new # Customers | Customer object that needs to be added
 
 
@@ -97,7 +95,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::CustomersApi.new
-
 customer_id = 56 # Integer | ID of customer to delete
 
 
@@ -125,8 +122,8 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
 
@@ -208,7 +205,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::CustomersApi.new
-
 customer_id = 789 # Integer | ID of customer to return
 
 
@@ -237,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -290,7 +286,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -349,7 +345,7 @@ This endpoint does not need any parameter.
 
 
 # **update_customer**
-> Customer update_customer(customer_id, body)
+> Customer update_customer(bodycustomer_id)
 
 Update customer
 
@@ -373,15 +369,13 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::CustomersApi.new
-
-customer_id = 56 # Integer | ID of customer to update
-
 body = StandoutFortnox::Customer.new # Customer | Customer object that needs to be added
+customer_id = 56 # Integer | ID of customer to update
 
 
 begin
   #Update customer
-  result = api_instance.update_customer(customer_id, body)
+  result = api_instance.update_customer(bodycustomer_id)
   p result
 rescue StandoutFortnox::ApiError => e
   puts "Exception when calling CustomersApi->update_customer: #{e}"
@@ -392,8 +386,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **Integer**| ID of customer to update | 
  **body** | [**Customer**](Customer.md)| Customer object that needs to be added | 
+ **customer_id** | **Integer**| ID of customer to update | 
 
 ### Return type
 

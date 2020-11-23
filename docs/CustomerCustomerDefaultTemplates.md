@@ -8,4 +8,3 @@ Name | Type | Description | Notes
 **offer** | **String** | Default template for offers. Must be a name of an existing print template. | [optional] 
 **order** | **String** | Default template for orders. Must be a name of an existing print template. | [optional] 
 
-

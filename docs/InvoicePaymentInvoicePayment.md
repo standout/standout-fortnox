@@ -27,4 +27,3 @@ Name | Type | Description | Notes
 **voucher_year** | **Integer** | Id of the voucher year | [optional] 
 **source** | **String** | Payment source manual / direct | [optional] 
 
-

@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **phone** | **String** | Phone number of the customer. | [optional] 
 **zip_code** | **String** | Zip code of the customers. | [optional] 
 
-

@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **edi_our_electronic_reference** | **String** | Our electronic reference for EDI | [optional] 
 **edi_your_electronic_reference** | **String** | Your electronic reference for EDI | [optional] 
 
-

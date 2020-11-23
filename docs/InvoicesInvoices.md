@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **String** | Direct url to the record. | [optional] 
 **balance** | **Float** | Balance of the invoice. | [optional] 
-**booked** | **BOOLEAN** | If the invoice is bookkept. This value can be changed by using the action &#39;bookkeep&#39;. | [optional] 
-**cancelled** | **BOOLEAN** | If the invoice is cancelled. This value can be changed by using the action &#39;cancel&#39;. | [optional] 
+**booked** | **BOOLEAN** | If the invoice is bookkept. This value can be changed by using the action &#x27;bookkeep&#x27;. | [optional] 
+**cancelled** | **BOOLEAN** | If the invoice is cancelled. This value can be changed by using the action &#x27;cancel&#x27;. | [optional] 
 **cost_center** | **String** | Code of the cost center. The code must be of an existing cost center. | [optional] 
 **currency** | **String** | Code of the currency. The code must be of an existing currency. | [optional] 
 **currency_rate** | **Float** | Currency rate used for the invoice. | [optional] 
@@ -26,5 +26,4 @@ Name | Type | Description | Notes
 **terms_of_payment** | **String** | Code of the terms of payment. The code must be of an existing terms of payment. | [optional] 
 **total** | **Float** | The total amount of the invoice. | [optional] 
 **way_of_delivery** | **String** | Code of the way of delivery. The code must be of an existing way of delivery. | [optional] 
-
 

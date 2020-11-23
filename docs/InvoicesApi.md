@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**credit_invoice**](InvoicesApi.md#credit_invoice) | **PUT** /invoices/{documentNumber}/credit | Credit an invoice
 [**e_invoice**](InvoicesApi.md#e_invoice) | **GET** /invoices/{documentNumber}/einvoice | Send an e-invoice
 [**email_invoice**](InvoicesApi.md#email_invoice) | **GET** /invoices/{documentNumber}/email | Email an invoice
-[**external_print_invoice**](InvoicesApi.md#external_print_invoice) | **PUT** /invoices/{documentNumber}/externalprint | Mark invoice as &#39;Sent&#39; without generating a PDF
+[**external_print_invoice**](InvoicesApi.md#external_print_invoice) | **PUT** /invoices/{documentNumber}/externalprint | Mark invoice as &#x27;Sent&#x27; without generating a PDF
 [**get_cancelled_invoices**](InvoicesApi.md#get_cancelled_invoices) | **GET** /invoices/?filter&#x3D;cancelled | Get all cancelled invoices
 [**get_fully_paid_invoices**](InvoicesApi.md#get_fully_paid_invoices) | **GET** /invoices/?filter&#x3D;fullypaid | Get all fully paid invoices
 [**get_invoice**](InvoicesApi.md#get_invoice) | **GET** /invoices/{documentNumber} | Get a specific invoice
@@ -22,7 +22,6 @@ Method | HTTP request | Description
 [**print_invoice**](InvoicesApi.md#print_invoice) | **GET** /invoices/{documentNumber}/print | Print an invoice
 [**print_invoice_reminder**](InvoicesApi.md#print_invoice_reminder) | **GET** /invoices/{documentNumber}/printreminder | Print an invoice reminder
 [**update_invoice**](InvoicesApi.md#update_invoice) | **PUT** /invoices/{documentNumber} | Update invoice
-
 
 # **add_invoice**
 > Invoice add_invoice(body)
@@ -49,7 +48,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 body = StandoutFortnox::Invoice.new # Invoice | Invoice object that needs to be added
 
 
@@ -108,7 +106,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 document_number = 56 # Integer | Document number
 
 
@@ -167,7 +164,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 document_number = 56 # Integer | Document number
 
 
@@ -226,7 +222,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 document_number = 56 # Integer | Document number
 
 
@@ -285,7 +280,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 document_number = 56 # Integer | Document number
 
 
@@ -344,7 +338,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 document_number = 56 # Integer | Document number
 
 
@@ -403,7 +396,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 document_number = 56 # Integer | Document number
 
 
@@ -568,7 +560,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 document_number = 56 # Integer | Document number
 
 
@@ -627,29 +618,28 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 opts = { 
-  filter: nil, # Object | Retrieves all invoices matching given filter
-  offset: nil, # Object | 
-  limit: nil, # Object | 
-  sortby: nil, # Object | Which property to sort by, must be defined as sortable in documentation
-  sortorder: nil, # Object | 
-  page: nil, # Object | 
-  lastmodified: nil, # Object | Retrieves all records since the provided timestamp
-  fromdate: nil, # Object | Defines a selection based on a start date.
-  todate: nil, # Object | Defines a selection based on an end date.
-  costcenter: nil, # Object | Get only invoices inluding given value for CostCenter
-  currency: nil, # Object | Get only invoices inluding given value for Currency
-  customername: nil, # Object | Get only invoices inluding given value for CustomerName
-  customernumber: nil, # Object | Get only invoices inluding given value for CustomerNumber
-  documentnumber: nil, # Object | Get only invoices inluding given value for DocumentNumber
-  externalinvoicereference1: nil, # Object | Get only invoices inluding given value for ExternalInvoiceReference1
-  externalinvoicereference2: nil, # Object | Get only invoices inluding given value for ExternalInvoiceReference2
-  ocr: nil, # Object | Get only invoices inluding given value for OCR
-  ourreference: nil, # Object | Get only invoices inluding given value for OurReference
-  project: nil, # Object | Get only invoices inluding given value for Project
-  yourordernumber: nil, # Object | Get only invoices inluding given value for YourOrderNumber
-  yourreference: nil # Object | Get only invoices inluding given value for YourReference
+  filter: StandoutFortnox::null.new, #  | Retrieves all invoices matching given filter
+  offset: StandoutFortnox::null.new, #  | 
+  limit: StandoutFortnox::null.new, #  | 
+  sortby: StandoutFortnox::null.new, #  | Which property to sort by, must be defined as sortable in documentation
+  sortorder: StandoutFortnox::null.new, #  | 
+  page: StandoutFortnox::null.new, #  | 
+  lastmodified: StandoutFortnox::null.new, #  | Retrieves all records since the provided timestamp
+  fromdate: StandoutFortnox::null.new, #  | Defines a selection based on a start date.
+  todate: StandoutFortnox::null.new, #  | Defines a selection based on an end date.
+  costcenter: StandoutFortnox::null.new, #  | Get only invoices inluding given value for CostCenter
+  currency: StandoutFortnox::null.new, #  | Get only invoices inluding given value for Currency
+  customername: StandoutFortnox::null.new, #  | Get only invoices inluding given value for CustomerName
+  customernumber: StandoutFortnox::null.new, #  | Get only invoices inluding given value for CustomerNumber
+  documentnumber: StandoutFortnox::null.new, #  | Get only invoices inluding given value for DocumentNumber
+  externalinvoicereference1: StandoutFortnox::null.new, #  | Get only invoices inluding given value for ExternalInvoiceReference1
+  externalinvoicereference2: StandoutFortnox::null.new, #  | Get only invoices inluding given value for ExternalInvoiceReference2
+  ocr: StandoutFortnox::null.new, #  | Get only invoices inluding given value for OCR
+  ourreference: StandoutFortnox::null.new, #  | Get only invoices inluding given value for OurReference
+  project: StandoutFortnox::null.new, #  | Get only invoices inluding given value for Project
+  yourordernumber: StandoutFortnox::null.new, #  | Get only invoices inluding given value for YourOrderNumber
+  yourreference: StandoutFortnox::null.new #  | Get only invoices inluding given value for YourReference
 }
 
 begin
@@ -665,27 +655,27 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | [**Object**](.md)| Retrieves all invoices matching given filter | [optional] 
- **offset** | [**Object**](.md)|  | [optional] 
- **limit** | [**Object**](.md)|  | [optional] 
- **sortby** | [**Object**](.md)| Which property to sort by, must be defined as sortable in documentation | [optional] 
- **sortorder** | [**Object**](.md)|  | [optional] 
- **page** | [**Object**](.md)|  | [optional] 
- **lastmodified** | [**Object**](.md)| Retrieves all records since the provided timestamp | [optional] 
- **fromdate** | [**Object**](.md)| Defines a selection based on a start date. | [optional] 
- **todate** | [**Object**](.md)| Defines a selection based on an end date. | [optional] 
- **costcenter** | [**Object**](.md)| Get only invoices inluding given value for CostCenter | [optional] 
- **currency** | [**Object**](.md)| Get only invoices inluding given value for Currency | [optional] 
- **customername** | [**Object**](.md)| Get only invoices inluding given value for CustomerName | [optional] 
- **customernumber** | [**Object**](.md)| Get only invoices inluding given value for CustomerNumber | [optional] 
- **documentnumber** | [**Object**](.md)| Get only invoices inluding given value for DocumentNumber | [optional] 
- **externalinvoicereference1** | [**Object**](.md)| Get only invoices inluding given value for ExternalInvoiceReference1 | [optional] 
- **externalinvoicereference2** | [**Object**](.md)| Get only invoices inluding given value for ExternalInvoiceReference2 | [optional] 
- **ocr** | [**Object**](.md)| Get only invoices inluding given value for OCR | [optional] 
- **ourreference** | [**Object**](.md)| Get only invoices inluding given value for OurReference | [optional] 
- **project** | [**Object**](.md)| Get only invoices inluding given value for Project | [optional] 
- **yourordernumber** | [**Object**](.md)| Get only invoices inluding given value for YourOrderNumber | [optional] 
- **yourreference** | [**Object**](.md)| Get only invoices inluding given value for YourReference | [optional] 
+ **filter** | [****](.md)| Retrieves all invoices matching given filter | [optional] 
+ **offset** | [****](.md)|  | [optional] 
+ **limit** | [****](.md)|  | [optional] 
+ **sortby** | [****](.md)| Which property to sort by, must be defined as sortable in documentation | [optional] 
+ **sortorder** | [****](.md)|  | [optional] 
+ **page** | [****](.md)|  | [optional] 
+ **lastmodified** | [****](.md)| Retrieves all records since the provided timestamp | [optional] 
+ **fromdate** | [****](.md)| Defines a selection based on a start date. | [optional] 
+ **todate** | [****](.md)| Defines a selection based on an end date. | [optional] 
+ **costcenter** | [****](.md)| Get only invoices inluding given value for CostCenter | [optional] 
+ **currency** | [****](.md)| Get only invoices inluding given value for Currency | [optional] 
+ **customername** | [****](.md)| Get only invoices inluding given value for CustomerName | [optional] 
+ **customernumber** | [****](.md)| Get only invoices inluding given value for CustomerNumber | [optional] 
+ **documentnumber** | [****](.md)| Get only invoices inluding given value for DocumentNumber | [optional] 
+ **externalinvoicereference1** | [****](.md)| Get only invoices inluding given value for ExternalInvoiceReference1 | [optional] 
+ **externalinvoicereference2** | [****](.md)| Get only invoices inluding given value for ExternalInvoiceReference2 | [optional] 
+ **ocr** | [****](.md)| Get only invoices inluding given value for OCR | [optional] 
+ **ourreference** | [****](.md)| Get only invoices inluding given value for OurReference | [optional] 
+ **project** | [****](.md)| Get only invoices inluding given value for Project | [optional] 
+ **yourordernumber** | [****](.md)| Get only invoices inluding given value for YourOrderNumber | [optional] 
+ **yourreference** | [****](.md)| Get only invoices inluding given value for YourReference | [optional] 
 
 ### Return type
 
@@ -697,7 +687,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -886,7 +876,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 document_number = 56 # Integer | Document number
 
 
@@ -945,7 +934,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 document_number = 56 # Integer | Document number
 
 
@@ -1004,7 +992,6 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
 document_number = 56 # Integer | Document number
 
 
@@ -1039,7 +1026,7 @@ Name | Type | Description  | Notes
 
 
 # **update_invoice**
-> Invoice update_invoice(document_number, body)
+> Invoice update_invoice(bodydocument_number)
 
 Update invoice
 
@@ -1063,15 +1050,13 @@ StandoutFortnox.configure do |config|
 end
 
 api_instance = StandoutFortnox::InvoicesApi.new
-
-document_number = 56 # Integer | documentNumber of invoice to update
-
 body = StandoutFortnox::Invoice.new # Invoice | Invoice object to be updated
+document_number = 56 # Integer | documentNumber of invoice to update
 
 
 begin
   #Update invoice
-  result = api_instance.update_invoice(document_number, body)
+  result = api_instance.update_invoice(bodydocument_number)
   p result
 rescue StandoutFortnox::ApiError => e
   puts "Exception when calling InvoicesApi->update_invoice: #{e}"
@@ -1082,8 +1067,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **document_number** | **Integer**| documentNumber of invoice to update | 
  **body** | [**Invoice**](Invoice.md)| Invoice object to be updated | 
+ **document_number** | **Integer**| documentNumber of invoice to update | 
 
 ### Return type
 

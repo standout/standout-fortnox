@@ -12,4 +12,3 @@ Name | Type | Description | Notes
 **removed** | **BOOLEAN** | If the row is marked as removed. | [optional] 
 **transaction_information** | **String** | Transaction information regarding the row. | [optional] 
 
-

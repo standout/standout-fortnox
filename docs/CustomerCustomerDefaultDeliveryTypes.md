@@ -7,4 +7,3 @@ Name | Type | Description | Notes
 **offer** | **String** | Default delivery type for offers. Can be PRINT EMAIL or PRINTSERVICE. | [optional] 
 **order** | **String** | Default delivery type for orders. Can be PRINT EMAIL or PRINTSERVICE. | [optional] 
 
-

@@ -65,4 +65,3 @@ Name | Type | Description | Notes
 **your_reference** | **String** | Your reference of the customer. | [optional] 
 **zip_code** | **String** | Zip code of the customers. | [optional] 
 
-

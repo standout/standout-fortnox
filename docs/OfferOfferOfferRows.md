@@ -21,4 +21,3 @@ Name | Type | Description | Notes
 **unit** | **String** | Code of unit | [optional] 
 **vat** | **Float** | Vat percent code (If empty Fortnox will use settings from the article) | [optional] 
 
-

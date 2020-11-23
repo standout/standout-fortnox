@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **email_subject** | **String** | Subject of the e-mail. The variable {no} &#x3D; document number. The variable {name} &#x3D; customer name. | [optional] 
 **email_body** | **String** | Body of the e-mail. | [optional] 
 
-

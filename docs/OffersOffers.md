@@ -14,4 +14,3 @@ Name | Type | Description | Notes
 **sent** | **BOOLEAN** | If document is printed or e-mailed to customer | [optional] 
 **total** | **Float** | Total amount | [optional] 
 
-

@@ -10,4 +10,3 @@ Name | Type | Description | Notes
 **email_subject** | **String** | Subject of e-mail. {-} in body &#x3D; documentnumber. {name} &#x3D;  customer name. | [optional] 
 **email_body** | **String** | Body of e-mail. {-} in body &#x3D; documentnumber. {name} &#x3D;  customer name. | [optional] 
 
-

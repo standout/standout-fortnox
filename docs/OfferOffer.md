@@ -66,4 +66,3 @@ Name | Type | Description | Notes
 **your_reference_number** | **String** | ReferenceNumber | [optional] 
 **zip_code** | **String** | Zip code | [optional] 
 
-
