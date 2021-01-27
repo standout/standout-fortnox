@@ -13,17 +13,17 @@ Swagger Codegen version: 2.4.18
 require 'date'
 
 module StandoutFortnox
-  class InvoiceInvoiceInvoiceRows
+  class OrderOrderOrderRows
     # Searchable (accountnumberfrom=1111&accountnumberto=8999) Account number. If not provided the predefined account will be used.
     attr_accessor :account_number
 
     # Article number.
     attr_accessor :article_number
 
-    # Invoice contribution in percent.
+    # Order contribution in percent.
     attr_accessor :contribution_percent
 
-    # Invoice contribution in amount.
+    # Order contribution in amount.
     attr_accessor :contribution_value
 
     # Code of the cost center. The code must be of an existing cost center.
@@ -53,17 +53,11 @@ module StandoutFortnox
     # Price per unit.
     attr_accessor :price
 
-    # Price per unit excluding VAT (regardless of value of VATIncluded flag)
-    attr_accessor :price_excluding_vat
-
     # Code of the project. The code must be of an existing project.
     attr_accessor :project
 
     # The total amount of the invoice.
     attr_accessor :total
-
-    # Total amount for the row excluding VAT (regardless of value of VATIncluded flag)
-    attr_accessor :total_excluding_vat
 
     # Code of the unit for the row. The code must be of an existing unit.
     attr_accessor :unit
@@ -87,10 +81,8 @@ module StandoutFortnox
         :'house_work_hours_to_report' => :'HouseWorkHoursToReport',
         :'house_work_type' => :'HouseWorkType',
         :'price' => :'Price',
-        :'price_excluding_vat' => :'PriceExcludingVAT',
         :'project' => :'Project',
         :'total' => :'Total',
-        :'total_excluding_vat' => :'TotalExcludingVAT',
         :'unit' => :'Unit',
         :'vat' => :'VAT'
       }
@@ -112,10 +104,8 @@ module StandoutFortnox
         :'house_work_hours_to_report' => :'Integer',
         :'house_work_type' => :'String',
         :'price' => :'Float',
-        :'price_excluding_vat' => :'Float',
         :'project' => :'String',
         :'total' => :'Float',
-        :'total_excluding_vat' => :'Float',
         :'unit' => :'String',
         :'vat' => :'Integer'
       }
@@ -181,20 +171,12 @@ module StandoutFortnox
         self.price = attributes[:'Price']
       end
 
-      if attributes.has_key?(:'PriceExcludingVAT')
-        self.price_excluding_vat = attributes[:'PriceExcludingVAT']
-      end
-
       if attributes.has_key?(:'Project')
         self.project = attributes[:'Project']
       end
 
       if attributes.has_key?(:'Total')
         self.total = attributes[:'Total']
-      end
-
-      if attributes.has_key?(:'TotalExcludingVAT')
-        self.total_excluding_vat = attributes[:'TotalExcludingVAT']
       end
 
       if attributes.has_key?(:'Unit')
@@ -267,10 +249,8 @@ module StandoutFortnox
           house_work_hours_to_report == o.house_work_hours_to_report &&
           house_work_type == o.house_work_type &&
           price == o.price &&
-          price_excluding_vat == o.price_excluding_vat &&
           project == o.project &&
           total == o.total &&
-          total_excluding_vat == o.total_excluding_vat &&
           unit == o.unit &&
           vat == o.vat
     end
@@ -284,7 +264,7 @@ module StandoutFortnox
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [account_number, article_number, contribution_percent, contribution_value, cost_center, delivered_quantity, description, discount, discount_type, house_work, house_work_hours_to_report, house_work_type, price, price_excluding_vat, project, total, total_excluding_vat, unit, vat].hash
+      [account_number, article_number, contribution_percent, contribution_value, cost_center, delivered_quantity, description, discount, discount_type, house_work, house_work_hours_to_report, house_work_type, price, project, total, unit, vat].hash
     end
 
     # Builds the object from hash
