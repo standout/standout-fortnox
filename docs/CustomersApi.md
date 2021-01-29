@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 
 # **get_customers**
-> Customers get_customers
+> Customers get_customers(opts)
 
 Get all customers
 
@@ -268,9 +268,29 @@ end
 
 api_instance = StandoutFortnox::CustomersApi.new
 
+opts = { 
+  filter: nil, # Object | Retrieves all customers matching given filter
+  offset: nil, # Object | 
+  limit: nil, # Object | 
+  sortby: nil, # Object | Which property to sort by, must be defined as sortable in documentation
+  sortorder: nil, # Object | 
+  page: nil, # Object | 
+  lastmodified: nil, # Object | Retrieves all records since the provided timestamp
+  fromdate: nil, # Object | Defines a selection based on a start date.
+  todate: nil, # Object | Defines a selection based on an end date.
+  city: nil, # Object | Get only customers inluding given value for City
+  customernumber: nil, # Object | Get only customers inluding given value for CustomerNumber
+  email: nil, # Object | Get only customers inluding given value for Email
+  gln: nil, # Object | Get only customers inluding given value for GLN
+  glndelivery: nil, # Object | Get only customers inluding given value for GLNDelivery
+  organisationnumber: nil, # Object | Get only customers inluding given value for OrganisationNumber
+  phone1: nil, # Object | Get only customers inluding given value for Phone1
+  zipcode: nil # Object | Get only customers inluding given value for ZipCode
+}
+
 begin
   #Get all customers
-  result = api_instance.get_customers
+  result = api_instance.get_customers(opts)
   p result
 rescue StandoutFortnox::ApiError => e
   puts "Exception when calling CustomersApi->get_customers: #{e}"
@@ -278,7 +298,26 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filter** | [**Object**](.md)| Retrieves all customers matching given filter | [optional] 
+ **offset** | [**Object**](.md)|  | [optional] 
+ **limit** | [**Object**](.md)|  | [optional] 
+ **sortby** | [**Object**](.md)| Which property to sort by, must be defined as sortable in documentation | [optional] 
+ **sortorder** | [**Object**](.md)|  | [optional] 
+ **page** | [**Object**](.md)|  | [optional] 
+ **lastmodified** | [**Object**](.md)| Retrieves all records since the provided timestamp | [optional] 
+ **fromdate** | [**Object**](.md)| Defines a selection based on a start date. | [optional] 
+ **todate** | [**Object**](.md)| Defines a selection based on an end date. | [optional] 
+ **city** | [**Object**](.md)| Get only customers inluding given value for City | [optional] 
+ **customernumber** | [**Object**](.md)| Get only customers inluding given value for CustomerNumber | [optional] 
+ **email** | [**Object**](.md)| Get only customers inluding given value for Email | [optional] 
+ **gln** | [**Object**](.md)| Get only customers inluding given value for GLN | [optional] 
+ **glndelivery** | [**Object**](.md)| Get only customers inluding given value for GLNDelivery | [optional] 
+ **organisationnumber** | [**Object**](.md)| Get only customers inluding given value for OrganisationNumber | [optional] 
+ **phone1** | [**Object**](.md)| Get only customers inluding given value for Phone1 | [optional] 
+ **zipcode** | [**Object**](.md)| Get only customers inluding given value for ZipCode | [optional] 
 
 ### Return type
 
