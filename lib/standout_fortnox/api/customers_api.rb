@@ -244,7 +244,7 @@ module StandoutFortnox
     # @option opts [Object] :gln Get only customers inluding given value for GLN
     # @option opts [Object] :glndelivery Get only customers inluding given value for GLNDelivery
     # @option opts [Object] :organisationnumber Get only customers inluding given value for OrganisationNumber
-    # @option opts [Object] :phone1 Get only customers inluding given value for Phone1
+    # @option opts [Object] :phone Get only customers inluding given value for Phone1
     # @option opts [Object] :zipcode Get only customers inluding given value for ZipCode
     # @return [Customers]
     def get_customers(opts = {})
@@ -270,7 +270,7 @@ module StandoutFortnox
     # @option opts [Object] :gln Get only customers inluding given value for GLN
     # @option opts [Object] :glndelivery Get only customers inluding given value for GLNDelivery
     # @option opts [Object] :organisationnumber Get only customers inluding given value for OrganisationNumber
-    # @option opts [Object] :phone1 Get only customers inluding given value for Phone1
+    # @option opts [Object] :phone Get only customers inluding given value for Phone1
     # @option opts [Object] :zipcode Get only customers inluding given value for ZipCode
     # @return [Array<(Customers, Fixnum, Hash)>] Customers data, response status code and response headers
     def get_customers_with_http_info(opts = {})
@@ -297,7 +297,7 @@ module StandoutFortnox
       query_params[:'gln'] = opts[:'gln'] if !opts[:'gln'].nil?
       query_params[:'glndelivery'] = opts[:'glndelivery'] if !opts[:'glndelivery'].nil?
       query_params[:'organisationnumber'] = opts[:'organisationnumber'] if !opts[:'organisationnumber'].nil?
-      query_params[:'phone1'] = opts[:'phone1'] if !opts[:'phone1'].nil?
+      query_params[:'phone'] = opts[:'phone'] if !opts[:'phone'].nil?
       query_params[:'zipcode'] = opts[:'zipcode'] if !opts[:'zipcode'].nil?
 
       # header parameters
