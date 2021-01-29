@@ -229,6 +229,23 @@ module StandoutFortnox
     # Get all customers
     # Get all customers
     # @param [Hash] opts the optional parameters
+    # @option opts [Object] :filter Retrieves all customers matching given filter
+    # @option opts [Object] :offset 
+    # @option opts [Object] :limit 
+    # @option opts [Object] :sortby Which property to sort by, must be defined as sortable in documentation
+    # @option opts [Object] :sortorder 
+    # @option opts [Object] :page 
+    # @option opts [Object] :lastmodified Retrieves all records since the provided timestamp
+    # @option opts [Object] :fromdate Defines a selection based on a start date.
+    # @option opts [Object] :todate Defines a selection based on an end date.
+    # @option opts [Object] :city Get only customers inluding given value for City
+    # @option opts [Object] :customernumber Get only customers inluding given value for CustomerNumber
+    # @option opts [Object] :email Get only customers inluding given value for Email
+    # @option opts [Object] :gln Get only customers inluding given value for GLN
+    # @option opts [Object] :glndelivery Get only customers inluding given value for GLNDelivery
+    # @option opts [Object] :organisationnumber Get only customers inluding given value for OrganisationNumber
+    # @option opts [Object] :phone1 Get only customers inluding given value for Phone1
+    # @option opts [Object] :zipcode Get only customers inluding given value for ZipCode
     # @return [Customers]
     def get_customers(opts = {})
       data, _status_code, _headers = get_customers_with_http_info(opts)
@@ -238,6 +255,23 @@ module StandoutFortnox
     # Get all customers
     # Get all customers
     # @param [Hash] opts the optional parameters
+    # @option opts [Object] :filter Retrieves all customers matching given filter
+    # @option opts [Object] :offset 
+    # @option opts [Object] :limit 
+    # @option opts [Object] :sortby Which property to sort by, must be defined as sortable in documentation
+    # @option opts [Object] :sortorder 
+    # @option opts [Object] :page 
+    # @option opts [Object] :lastmodified Retrieves all records since the provided timestamp
+    # @option opts [Object] :fromdate Defines a selection based on a start date.
+    # @option opts [Object] :todate Defines a selection based on an end date.
+    # @option opts [Object] :city Get only customers inluding given value for City
+    # @option opts [Object] :customernumber Get only customers inluding given value for CustomerNumber
+    # @option opts [Object] :email Get only customers inluding given value for Email
+    # @option opts [Object] :gln Get only customers inluding given value for GLN
+    # @option opts [Object] :glndelivery Get only customers inluding given value for GLNDelivery
+    # @option opts [Object] :organisationnumber Get only customers inluding given value for OrganisationNumber
+    # @option opts [Object] :phone1 Get only customers inluding given value for Phone1
+    # @option opts [Object] :zipcode Get only customers inluding given value for ZipCode
     # @return [Array<(Customers, Fixnum, Hash)>] Customers data, response status code and response headers
     def get_customers_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -248,6 +282,23 @@ module StandoutFortnox
 
       # query parameters
       query_params = {}
+      query_params[:'filter'] = opts[:'filter'] if !opts[:'filter'].nil?
+      query_params[:'offset'] = opts[:'offset'] if !opts[:'offset'].nil?
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'sortby'] = opts[:'sortby'] if !opts[:'sortby'].nil?
+      query_params[:'sortorder'] = opts[:'sortorder'] if !opts[:'sortorder'].nil?
+      query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
+      query_params[:'lastmodified'] = opts[:'lastmodified'] if !opts[:'lastmodified'].nil?
+      query_params[:'fromdate'] = opts[:'fromdate'] if !opts[:'fromdate'].nil?
+      query_params[:'todate'] = opts[:'todate'] if !opts[:'todate'].nil?
+      query_params[:'city'] = opts[:'city'] if !opts[:'city'].nil?
+      query_params[:'customernumber'] = opts[:'customernumber'] if !opts[:'customernumber'].nil?
+      query_params[:'email'] = opts[:'email'] if !opts[:'email'].nil?
+      query_params[:'gln'] = opts[:'gln'] if !opts[:'gln'].nil?
+      query_params[:'glndelivery'] = opts[:'glndelivery'] if !opts[:'glndelivery'].nil?
+      query_params[:'organisationnumber'] = opts[:'organisationnumber'] if !opts[:'organisationnumber'].nil?
+      query_params[:'phone1'] = opts[:'phone1'] if !opts[:'phone1'].nil?
+      query_params[:'zipcode'] = opts[:'zipcode'] if !opts[:'zipcode'].nil?
 
       # header parameters
       header_params = {}
