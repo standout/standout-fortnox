@@ -283,6 +283,7 @@ opts = {
   email: nil, # Object | Get only customers inluding given value for Email
   gln: nil, # Object | Get only customers inluding given value for GLN
   glndelivery: nil, # Object | Get only customers inluding given value for GLNDelivery
+  name: nil, # Object | Get only customers inluding given value for Name
   organisationnumber: nil, # Object | Get only customers inluding given value for OrganisationNumber
   phone: nil, # Object | Get only customers inluding given value for Phone1
   zipcode: nil # Object | Get only customers inluding given value for ZipCode
@@ -315,6 +316,7 @@ Name | Type | Description  | Notes
  **email** | [**Object**](.md)| Get only customers inluding given value for Email | [optional] 
  **gln** | [**Object**](.md)| Get only customers inluding given value for GLN | [optional] 
  **glndelivery** | [**Object**](.md)| Get only customers inluding given value for GLNDelivery | [optional] 
+ **name** | [**Object**](.md)| Get only customers inluding given value for Name | [optional] 
  **organisationnumber** | [**Object**](.md)| Get only customers inluding given value for OrganisationNumber | [optional] 
  **phone** | [**Object**](.md)| Get only customers inluding given value for Phone1 | [optional] 
  **zipcode** | [**Object**](.md)| Get only customers inluding given value for ZipCode | [optional] 
