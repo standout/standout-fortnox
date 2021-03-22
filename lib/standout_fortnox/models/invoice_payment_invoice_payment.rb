@@ -83,6 +83,9 @@ module StandoutFortnox
     # Payment source manual / direct
     attr_accessor :source
 
+    # Write offs
+    attr_accessor :write_offs
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -108,7 +111,8 @@ module StandoutFortnox
         :'voucher_number' => :'VoucherNumber',
         :'voucher_series' => :'VoucherSeries',
         :'voucher_year' => :'VoucherYear',
-        :'source' => :'Source'
+        :'source' => :'Source',
+        :'write_offs' => :'WriteOffs'
       }
     end
 
@@ -137,7 +141,8 @@ module StandoutFortnox
         :'voucher_number' => :'Integer',
         :'voucher_series' => :'String',
         :'voucher_year' => :'Integer',
-        :'source' => :'String'
+        :'source' => :'String',
+        :'write_offs' => :'Array<InvoicePaymentInvoicePaymentWriteOffs>'
       }
     end
 
@@ -240,6 +245,12 @@ module StandoutFortnox
       if attributes.has_key?(:'Source')
         self.source = attributes[:'Source']
       end
+
+      if attributes.has_key?(:'WriteOffs')
+        if (value = attributes[:'WriteOffs']).is_a?(Array)
+          self.write_offs = value
+        end
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -321,7 +332,8 @@ module StandoutFortnox
           voucher_number == o.voucher_number &&
           voucher_series == o.voucher_series &&
           voucher_year == o.voucher_year &&
-          source == o.source
+          source == o.source &&
+          write_offs == o.write_offs
     end
 
     # @see the `==` method
@@ -333,7 +345,7 @@ module StandoutFortnox
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [url, amount, amount_currency, booked, currency, currency_rate, currency_unit, external_invoice_reference1, external_invoice_reference2, invoice_customer_name, invoice_customer_number, invoice_number, invoice_due_date, invoice_ocr, invoice_total, mode_of_payment, mode_of_payment_account, number, payment_date, voucher_number, voucher_series, voucher_year, source].hash
+      [url, amount, amount_currency, booked, currency, currency_rate, currency_unit, external_invoice_reference1, external_invoice_reference2, invoice_customer_name, invoice_customer_number, invoice_number, invoice_due_date, invoice_ocr, invoice_total, mode_of_payment, mode_of_payment_account, number, payment_date, voucher_number, voucher_series, voucher_year, source, write_offs].hash
     end
 
     # Builds the object from hash

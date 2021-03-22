@@ -26,5 +26,6 @@ Name | Type | Description | Notes
 **voucher_series** | **String** | Series of the voucher | [optional] 
 **voucher_year** | **Integer** | Id of the voucher year | [optional] 
 **source** | **String** | Payment source manual / direct | [optional] 
+**write_offs** | [**Array&lt;InvoicePaymentInvoicePaymentWriteOffs&gt;**](InvoicePaymentInvoicePaymentWriteOffs.md) | Write offs | [optional] 
 
 
