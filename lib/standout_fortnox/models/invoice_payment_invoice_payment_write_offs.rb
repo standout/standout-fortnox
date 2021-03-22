@@ -14,6 +14,9 @@ require 'date'
 
 module StandoutFortnox
   class InvoicePaymentInvoicePaymentWriteOffs
+    # Amount of the writeoff
+    attr_accessor :amount
+
     # Account number of the write off
     attr_accessor :account_number
 
@@ -35,6 +38,7 @@ module StandoutFortnox
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'amount' => :'Amount',
         :'account_number' => :'AccountNumber',
         :'cost_center' => :'CostCenter',
         :'currency' => :'Currency',
@@ -47,6 +51,7 @@ module StandoutFortnox
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'amount' => :'Float',
         :'account_number' => :'Integer',
         :'cost_center' => :'String',
         :'currency' => :'String',
@@ -63,6 +68,10 @@ module StandoutFortnox
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
+
+      if attributes.has_key?(:'Amount')
+        self.amount = attributes[:'Amount']
+      end
 
       if attributes.has_key?(:'AccountNumber')
         self.account_number = attributes[:'AccountNumber']
@@ -122,6 +131,7 @@ module StandoutFortnox
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          amount == o.amount &&
           account_number == o.account_number &&
           cost_center == o.cost_center &&
           currency == o.currency &&
@@ -139,7 +149,7 @@ module StandoutFortnox
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [account_number, cost_center, currency, description, transaction_information, project].hash
+      [amount, account_number, cost_center, currency, description, transaction_information, project].hash
     end
 
     # Builds the object from hash
