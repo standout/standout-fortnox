@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **email** | **String** | Email address for the customer. This must be a valid email address. | [optional] 
 **name** | **String** | Name of the customer. | 
 **organisation_number** | **String** | Organisation number of the customer. It needs to be a valid organisation number. | [optional] 
-**phone** | **String** | Phone number of the customer. | [optional] 
+**phone1** | **String** | Phone number of the customer. | [optional] 
 **zip_code** | **String** | Zip code of the customers. | [optional] 
 
 
