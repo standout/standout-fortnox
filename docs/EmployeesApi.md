@@ -19,18 +19,6 @@ Create customer
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::EmployeesApi.new
 
@@ -58,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -76,18 +64,6 @@ Update employee
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::EmployeesApi.new
 
@@ -118,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 

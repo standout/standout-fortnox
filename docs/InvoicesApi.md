@@ -35,18 +35,6 @@ Add an invoice
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -74,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -94,18 +82,6 @@ Bookkeep an invoice
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -133,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -153,18 +129,6 @@ Cancels an invoice (same as “Makulerad” in the GUI)
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -192,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -212,18 +176,6 @@ Creates a credit invoice from the provided invoice. The created credit invoice w
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -251,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -271,18 +223,6 @@ Sends an e-invoice to the customer with an attached PDF document of the invoice.
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -310,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -330,18 +270,6 @@ Sends an e-mail to the customer with an attached PDF document of the invoice. Yo
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -369,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -389,18 +317,6 @@ This action is used to set the field Sent as true from an external system withou
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -428,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -448,18 +364,6 @@ Retrieves all invoices with the status 'cancelled'
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -481,7 +385,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -501,18 +405,6 @@ Retrieves all invoices that has been fully paid
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -534,7 +426,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -554,18 +446,6 @@ Retrieves the details of an invoice. You need to supply the unique document numb
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -593,7 +473,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -613,18 +493,6 @@ Get all invoices
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -693,7 +561,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -713,18 +581,6 @@ Retrieves all invoices that is unbooked
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -746,7 +602,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -766,18 +622,6 @@ Retrieves all invoices that is unpaid and overdue
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -799,7 +643,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -819,18 +663,6 @@ Retrieves all invoices that is unpaid
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -852,7 +684,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -872,18 +704,6 @@ This action returns a PDF document with the current template that is used by the
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -911,7 +731,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -931,18 +751,6 @@ This action returns a PDF document with the current template that is used by the
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -970,7 +778,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -990,18 +798,6 @@ This action returns a PDF document with the current reminder template that is us
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -1029,7 +825,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
@@ -1049,18 +845,6 @@ Update an invoice, find by document number
 ```ruby
 # load the gem
 require 'standout_fortnox'
-# setup authorization
-StandoutFortnox.configure do |config|
-  # Configure API key authorization: access_token
-  config.api_key['Access-Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Access-Token'] = 'Bearer'
-
-  # Configure API key authorization: client_secret
-  config.api_key['Client-Secret'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Client-Secret'] = 'Bearer'
-end
 
 api_instance = StandoutFortnox::InvoicesApi.new
 
@@ -1091,7 +875,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[access_token](../README.md#access_token), [client_secret](../README.md#client_secret)
+No authorization required
 
 ### HTTP request headers
 
