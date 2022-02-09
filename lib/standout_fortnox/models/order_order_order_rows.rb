@@ -50,6 +50,9 @@ module StandoutFortnox
     # The type of house work. Can be CONSTRUCTION ELECTRICITY GLASSMETALWORK GROUNDDRAINAGEWORK MASONRY PAINTINGWALLPAPERING HVAC MAJORAPPLIANCEREPAIR MOVINGSERVICES ITSERVICES CLEANING TEXTILECLOTHING SNOWPLOWING GARDENING BABYSITTING OTHERCARE OTHERCOSTS or empty.
     attr_accessor :house_work_type
 
+    # Ordered quantity.
+    attr_accessor :ordered_quantity
+
     # Price per unit.
     attr_accessor :price
 
@@ -80,6 +83,7 @@ module StandoutFortnox
         :'house_work' => :'HouseWork',
         :'house_work_hours_to_report' => :'HouseWorkHoursToReport',
         :'house_work_type' => :'HouseWorkType',
+        :'ordered_quantity' => :'OrderedQuantity',
         :'price' => :'Price',
         :'project' => :'Project',
         :'total' => :'Total',
@@ -103,6 +107,7 @@ module StandoutFortnox
         :'house_work' => :'BOOLEAN',
         :'house_work_hours_to_report' => :'Integer',
         :'house_work_type' => :'String',
+        :'ordered_quantity' => :'Float',
         :'price' => :'Float',
         :'project' => :'String',
         :'total' => :'Float',
@@ -165,6 +170,10 @@ module StandoutFortnox
 
       if attributes.has_key?(:'HouseWorkType')
         self.house_work_type = attributes[:'HouseWorkType']
+      end
+
+      if attributes.has_key?(:'OrderedQuantity')
+        self.ordered_quantity = attributes[:'OrderedQuantity']
       end
 
       if attributes.has_key?(:'Price')
@@ -248,6 +257,7 @@ module StandoutFortnox
           house_work == o.house_work &&
           house_work_hours_to_report == o.house_work_hours_to_report &&
           house_work_type == o.house_work_type &&
+          ordered_quantity == o.ordered_quantity &&
           price == o.price &&
           project == o.project &&
           total == o.total &&
@@ -264,7 +274,7 @@ module StandoutFortnox
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [account_number, article_number, contribution_percent, contribution_value, cost_center, delivered_quantity, description, discount, discount_type, house_work, house_work_hours_to_report, house_work_type, price, project, total, unit, vat].hash
+      [account_number, article_number, contribution_percent, contribution_value, cost_center, delivered_quantity, description, discount, discount_type, house_work, house_work_hours_to_report, house_work_type, ordered_quantity, price, project, total, unit, vat].hash
     end
 
     # Builds the object from hash

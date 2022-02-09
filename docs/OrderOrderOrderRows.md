@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **house_work** | **BOOLEAN** | If the row is hosework. | [optional] 
 **house_work_hours_to_report** | **Integer** | Hours to be reported if the quantity of the row should not be used as hours. Can only contain numeric values without decimals. | [optional] 
 **house_work_type** | **String** | The type of house work. Can be CONSTRUCTION ELECTRICITY GLASSMETALWORK GROUNDDRAINAGEWORK MASONRY PAINTINGWALLPAPERING HVAC MAJORAPPLIANCEREPAIR MOVINGSERVICES ITSERVICES CLEANING TEXTILECLOTHING SNOWPLOWING GARDENING BABYSITTING OTHERCARE OTHERCOSTS or empty. | [optional] 
+**ordered_quantity** | **Float** | Ordered quantity. | [optional] 
 **price** | **Float** | Price per unit. | [optional] 
 **project** | **String** | Code of the project. The code must be of an existing project. | [optional] 
 **total** | **Float** | The total amount of the invoice. | [optional] 

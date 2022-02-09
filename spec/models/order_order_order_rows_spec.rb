@@ -104,6 +104,12 @@ describe 'OrderOrderOrderRows' do
     end
   end
 
+  describe 'test attribute "ordered_quantity"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   describe 'test attribute "price"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
