@@ -59,6 +59,9 @@ module StandoutFortnox
     # Code of the project. The code must be of an existing project.
     attr_accessor :project
 
+    # StockPointCode.
+    attr_accessor :stock_point_code
+
     # The total amount of the invoice.
     attr_accessor :total
 
@@ -86,6 +89,7 @@ module StandoutFortnox
         :'ordered_quantity' => :'OrderedQuantity',
         :'price' => :'Price',
         :'project' => :'Project',
+        :'stock_point_code' => :'StockPointCode',
         :'total' => :'Total',
         :'unit' => :'Unit',
         :'vat' => :'VAT'
@@ -110,6 +114,7 @@ module StandoutFortnox
         :'ordered_quantity' => :'Float',
         :'price' => :'Float',
         :'project' => :'String',
+        :'stock_point_code' => :'String',
         :'total' => :'Float',
         :'unit' => :'String',
         :'vat' => :'Integer'
@@ -182,6 +187,10 @@ module StandoutFortnox
 
       if attributes.has_key?(:'Project')
         self.project = attributes[:'Project']
+      end
+
+      if attributes.has_key?(:'StockPointCode')
+        self.stock_point_code = attributes[:'StockPointCode']
       end
 
       if attributes.has_key?(:'Total')
@@ -260,6 +269,7 @@ module StandoutFortnox
           ordered_quantity == o.ordered_quantity &&
           price == o.price &&
           project == o.project &&
+          stock_point_code == o.stock_point_code &&
           total == o.total &&
           unit == o.unit &&
           vat == o.vat
@@ -274,7 +284,7 @@ module StandoutFortnox
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [account_number, article_number, contribution_percent, contribution_value, cost_center, delivered_quantity, description, discount, discount_type, house_work, house_work_hours_to_report, house_work_type, ordered_quantity, price, project, total, unit, vat].hash
+      [account_number, article_number, contribution_percent, contribution_value, cost_center, delivered_quantity, description, discount, discount_type, house_work, house_work_hours_to_report, house_work_type, ordered_quantity, price, project, stock_point_code, total, unit, vat].hash
     end
 
     # Builds the object from hash
@@ -380,6 +390,5 @@ module StandoutFortnox
         value
       end
     end
-
   end
 end
