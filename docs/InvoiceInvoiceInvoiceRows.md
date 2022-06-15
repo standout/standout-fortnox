@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **price** | **Float** | Price per unit. | [optional] 
 **price_excluding_vat** | **Float** | Price per unit excluding VAT (regardless of value of VATIncluded flag) | [optional] 
 **project** | **String** | Code of the project. The code must be of an existing project. | [optional] 
+**stock_point_code** | **String** | The name of the Stock Point. Only available if the module LAGER is active. | [optional] 
 **total** | **Float** | The total amount of the invoice. | [optional] 
 **total_excluding_vat** | **Float** | Total amount for the row excluding VAT (regardless of value of VATIncluded flag) | [optional] 
 **unit** | **String** | Code of the unit for the row. The code must be of an existing unit. | [optional] 

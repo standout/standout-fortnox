@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **ordered_quantity** | **Float** | Ordered quantity. | [optional] 
 **price** | **Float** | Price per unit. | [optional] 
 **project** | **String** | Code of the project. The code must be of an existing project. | [optional] 
+**stock_point_code** | **String** | The name of the Stock Point. Only available if the module LAGER is active. | [optional]
 **total** | **Float** | The total amount of the invoice. | [optional] 
 **unit** | **String** | Code of the unit for the row. The code must be of an existing unit. | [optional] 
 **vat** | **Integer** | VAT percentage of the row. The percentage needs to be of an existing VAT percentage. | [optional] 
