@@ -223,8 +223,8 @@ module StandoutFortnox
         invalid_properties.push('invalid value for "article_number", the character length must be smaller than or equal to 50.')
       end
 
-      if !@description.nil? && @description.to_s.length > 50
-        invalid_properties.push('invalid value for "description", the character length must be smaller than or equal to 50.')
+      if !@description.nil? && @description.to_s.length > 255
+        invalid_properties.push('invalid value for "description", the character length must be smaller than or equal to 255.')
       end
 
       invalid_properties
@@ -251,8 +251,8 @@ module StandoutFortnox
     # Custom attribute writer method with validation
     # @param [Object] description Value to be assigned
     def description=(description)
-      if !description.nil? && description.to_s.length > 50
-        fail ArgumentError, 'invalid value for "description", the character length must be smaller than or equal to 50.'
+      if !description.nil? && description.to_s.length > 255
+        fail ArgumentError, 'invalid value for "description", the character length must be smaller than or equal to 255.'
       end
 
       @description = description
